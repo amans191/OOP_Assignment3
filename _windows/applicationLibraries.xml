@@ -16,10 +16,11 @@
     </library>
     <library name="minim">
       <CLASSES>
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library/minim.jar!/" />
+        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
+      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" recursive="false" />
     </library>
   </component>
 </application>
