@@ -1,0 +1,38 @@
+<application>
+  <component name="libraryTable">
+    <library name="Assignment3Libraries">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/core.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="core">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/core.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/JavaLibraries/j4k-natives-windows-amd64.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="jar://$USER_HOME$/Desktop/JavaLibraries/j4k-natives-windows-amd64.jar!/" recursive="false" />
+    </library>
+    <library name="core1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/core.jar!/" />
+        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" recursive="false" />
+    </library>
+    <library name="core2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/core.jar!/" />
+        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" recursive="false" />
+    </library>
+  </component>
+</application>
