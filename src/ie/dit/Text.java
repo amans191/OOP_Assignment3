@@ -1,11 +1,13 @@
 package ie.dit;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import processing.core.PApplet;
 
-public class Text {
+public class Text  extends PApplet {
 
     private String fileName;
 
@@ -18,18 +20,33 @@ public class Text {
 
     public void loadFile(String fileName)
     {
-        try
+        if (fileName == "")
         {
-            BufferedReader reader = new BufferedReader(new FileReader(fileName));
-            String current = "";
-            while ((current = reader.readLine()) != null)
-            {
-                lines.add(current);
+            selectInput("Please Select a File,", "fileDialog");
+        }
+        else {
+            try {
+                System.out.println(fileName);
+                BufferedReader reader = new BufferedReader(new FileReader(fileName));
+                String current = "";
+                while ((current = reader.readLine()) != null) {
+                    lines.add(current);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
-        catch(IOException e)
+    }
+
+    public void fileDialog(File selection) {
+        if (selection == null)
         {
-            e.printStackTrace();
+            System.out.println("No file selected");
+        }
+        else
+        {
+            loadFile(selection.getPath());
+            readText();
         }
     }
 
