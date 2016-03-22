@@ -1,6 +1,5 @@
 package ie.dit;
 
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -40,8 +39,15 @@ public class Text  extends PApplet {
     }
 
     public void fileDialog(File selection) {
-        loadFile(selection.getPath());
-        readText();
+        if (selection == null)
+        {
+            System.out.println("No file selected");
+        }
+        else
+        {
+            loadFile(selection.getPath());
+            readText();
+        }
     }
 
     public void readText()
