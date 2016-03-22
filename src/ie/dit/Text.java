@@ -27,6 +27,7 @@ public class Text  extends PApplet {
         }
         else {
             try {
+                System.out.println(fileName);
                 BufferedReader reader = new BufferedReader(new FileReader(fileName));
                 String current = "";
                 while ((current = reader.readLine()) != null) {
@@ -40,7 +41,7 @@ public class Text  extends PApplet {
 
     public void fileDialog(File selection) {
         loadFile(selection.getPath());
-        System.out.println(selection.getPath());
+        readText();
     }
 
     public void readText()
