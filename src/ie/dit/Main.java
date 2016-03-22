@@ -12,5 +12,6 @@ public class Main{
         Text test2 = new Text("");
 
         test.readText();
+
     }
 }

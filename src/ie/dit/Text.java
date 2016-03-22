@@ -56,5 +56,24 @@ public class Text  extends PApplet {
         {
             System.out.println(lines.get(i));
         }
+
+        for (int i = 0; i < lines.size(); i++)
+        {
+            ArrayList<String> returnedSentence = splitSentence(lines.get(i));
+            for (int j = 0; j < returnedSentence.size(); j++)
+            {
+                System.out.println(returnedSentence.get(j));
+            }
+        }
+    }
+
+    public ArrayList<String> splitSentence(String sentence)
+    {
+        ArrayList<String> words = new ArrayList<>();
+        for (String word: sentence.split(" "))
+        {
+            words.add(word);
+        }
+        return words;
     }
 }
