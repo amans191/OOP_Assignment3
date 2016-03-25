@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Assignment3Libraries" level="application" />
     <orderEntry type="library" name="core" level="application" />
+    <orderEntry type="library" name="gluegen-rt" level="application" />
+    <orderEntry type="library" name="jogl-all" level="application" />
   </component>
 </module>
