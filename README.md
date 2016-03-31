@@ -1,6 +1,7 @@
 The memebers involved with this assignment are:
-Vardaan Sharma
-Eoin Smyth
+Vardaan Sharma,
+Eoin Smyth,
 Amandeep Singh
 
-This  assignment will be using a Kinect to detect sign language and will translate a sentence. 
+This  assignment will be using the camera webcam to control the pages of a book 
+
