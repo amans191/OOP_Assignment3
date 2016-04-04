@@ -1,10 +1,11 @@
 package ie.dit;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.FileReader;
+
+import java.io.*;
 import java.util.ArrayList;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import processing.core.PApplet;
 
 public class Text  extends PApplet {
@@ -26,7 +27,7 @@ public class Text  extends PApplet {
             try {
                 System.out.println(fileName);
                 BufferedReader reader = new BufferedReader(new FileReader(fileName));
-                String current = "";
+                String current;
                 while ((current = reader.readLine()) != null) {
                     lines.add(current);
                 }
@@ -36,9 +37,18 @@ public class Text  extends PApplet {
         }
     }
 
-    public void loadPDFFile(String fileName)
+    public void loadPDFFile(File selection)
     {
-
+        try {
+            PDFTextStripper textStripper=new PDFTextStripper();
+            PDDocument document=PDDocument.load(selection);
+            String text=textStripper.getText(document);
+            document.close();
+            System.out.println(text);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public void fileDialog(File selection) {
@@ -57,7 +67,7 @@ public class Text  extends PApplet {
             }
             if (fileType.equals("pdf"))
             {
-                loadPDFFile(selectionPath);
+                loadPDFFile(selection);
             }
             else
             {
@@ -69,17 +79,16 @@ public class Text  extends PApplet {
 
     public void readText()
     {
-        for (int i = 0; i < lines.size(); i++)
+        for (String x:lines)
         {
-            System.out.println(lines.get(i));
+            System.out.println(x);
         }
-
-        for (int i = 0; i < lines.size(); i++)
+        for (String x: lines)
         {
-            ArrayList<String> returnedSentence = splitSentence(lines.get(i));
-            for (int j = 0; j < returnedSentence.size(); j++)
+            ArrayList<String> returnedSentence = splitSentence(x);
+            for (String xx:returnedSentence)
             {
-                System.out.println(returnedSentence.get(j));
+                System.out.println(xx);
             }
         }
     }
