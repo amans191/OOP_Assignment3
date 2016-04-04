@@ -9,8 +9,6 @@ import processing.core.PApplet;
 
 public class Text  extends PApplet {
 
-    private String fileName;
-
     ArrayList<String> lines = new ArrayList<>();
 
     public Text(String fileName)
@@ -20,7 +18,7 @@ public class Text  extends PApplet {
 
     public void loadFile(String fileName)
     {
-        if (fileName == "")
+        if (fileName.equals(""))
         {
             selectInput("Please Select a File,", "fileDialog");
         }
@@ -38,6 +36,11 @@ public class Text  extends PApplet {
         }
     }
 
+    public void loadPDFFile(String fileName)
+    {
+
+    }
+
     public void fileDialog(File selection) {
         if (selection == null)
         {
@@ -45,7 +48,21 @@ public class Text  extends PApplet {
         }
         else
         {
-            loadFile(selection.getPath());
+            String selectionPath = selection.getPath();
+            String fileType = "";
+            int i = selectionPath.lastIndexOf('.');
+            if (i > 0)
+            {
+                fileType = selectionPath.substring(i + 1);
+            }
+            if (fileType.equals("pdf"))
+            {
+                loadPDFFile(selectionPath);
+            }
+            else
+            {
+                loadFile(selectionPath);
+            }
             readText();
         }
     }
