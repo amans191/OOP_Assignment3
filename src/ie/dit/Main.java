@@ -1,7 +1,7 @@
 package ie.dit;
 
 import processing.core.PApplet;
-//vardaan was here
+
 public class Main{
 
     public static void main(String[] args) {
