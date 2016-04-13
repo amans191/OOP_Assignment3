@@ -12,5 +12,6 @@
     <orderEntry type="library" name="jogl-all" level="application" />
     <orderEntry type="library" name="core" level="application" />
     <orderEntry type="library" name="pdfbox-app-2.0.0" level="application" />
+    <orderEntry type="library" name="lib" level="application" />
   </component>
 </module>
