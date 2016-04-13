@@ -1,15 +1,14 @@
 package ie.dit;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.FileReader;
+
+import java.io.*;
 import java.util.ArrayList;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import processing.core.PApplet;
 
 public class Text  extends PApplet {
-
-    private String fileName;
 
     ArrayList<String> lines = new ArrayList<>();
 
@@ -20,7 +19,7 @@ public class Text  extends PApplet {
 
     public void loadFile(String fileName)
     {
-        if (fileName == "")
+        if (fileName.equals(""))
         {
             selectInput("Please Select a File,", "fileDialog");
         }
@@ -28,13 +27,27 @@ public class Text  extends PApplet {
             try {
                 System.out.println(fileName);
                 BufferedReader reader = new BufferedReader(new FileReader(fileName));
-                String current = "";
+                String current;
                 while ((current = reader.readLine()) != null) {
                     lines.add(current);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void loadPDFFile(File selection)
+    {
+        try {
+            PDFTextStripper textStripper=new PDFTextStripper();
+            PDDocument document=PDDocument.load(selection);
+            String text=textStripper.getText(document);
+            document.close();
+            System.out.println(text);
+        }
+        catch (IOException e){
+            e.printStackTrace();
         }
     }
 
@@ -45,24 +58,37 @@ public class Text  extends PApplet {
         }
         else
         {
-            loadFile(selection.getPath());
+            String selectionPath = selection.getPath();
+            String fileType = "";
+            int i = selectionPath.lastIndexOf('.');
+            if (i > 0)
+            {
+                fileType = selectionPath.substring(i + 1);
+            }
+            if (fileType.equals("pdf"))
+            {
+                loadPDFFile(selection);
+            }
+            else
+            {
+                loadFile(selectionPath);
+            }
             readText();
         }
     }
 
     public void readText()
     {
-        for (int i = 0; i < lines.size(); i++)
+        for (String x:lines)
         {
-            System.out.println(lines.get(i));
+            System.out.println(x);
         }
-
-        for (int i = 0; i < lines.size(); i++)
+        for (String x: lines)
         {
-            ArrayList<String> returnedSentence = splitSentence(lines.get(i));
-            for (int j = 0; j < returnedSentence.size(); j++)
+            ArrayList<String> returnedSentence = splitSentence(x);
+            for (String xx:returnedSentence)
             {
-                System.out.println(returnedSentence.get(j));
+                System.out.println(xx);
             }
         }
     }
