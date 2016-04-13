@@ -44,7 +44,7 @@ public class Text  extends PApplet {
             PDDocument document=PDDocument.load(selection);
             String text=textStripper.getText(document);
             document.close();
-            System.out.println(text);
+            lines = splitFile(text);
         }
         catch (IOException e){
             e.printStackTrace();
@@ -73,22 +73,21 @@ public class Text  extends PApplet {
             {
                 loadFile(selectionPath);
             }
-            readText();
         }
     }
 
-    public void readText()
+    public void readText(boolean words)
     {
         for (String x:lines)
         {
             System.out.println(x);
         }
-        for (String x: lines)
-        {
-            ArrayList<String> returnedSentence = splitSentence(x);
-            for (String xx:returnedSentence)
-            {
-                System.out.println(xx);
+        if (words) {
+            for (String x : lines) {
+                ArrayList<String> returnedSentence = splitSentence(x);
+                for (String xx : returnedSentence) {
+                    System.out.println(xx);
+                }
             }
         }
     }
@@ -101,5 +100,16 @@ public class Text  extends PApplet {
             words.add(word);
         }
         return words;
+    }
+
+    public ArrayList<String> splitFile(String textToBeSplit)
+    {
+        ArrayList<String> sentences = new ArrayList<>();
+        for (String sentence : textToBeSplit.split("\n"))
+        {
+            sentences.add(sentence);
+            System.out.println(sentence);
+        }
+        return sentences;
     }
 }
