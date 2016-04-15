@@ -1,7 +1,7 @@
 package ie.dit;
 
 import processing.core.*;
-
+//import processing.video.*;
 import java.awt.event.KeyListener;
 
 /**
@@ -14,13 +14,21 @@ public class GUI extends PApplet {
     public void settings() {
         size(1200, 700 , P3D);
         turn = false;
+        animation = false;
+        angle = 0;
     }
 
+    public float angle ;
     public boolean turn;
     
 
     public void draw(){
-        background(0);
+
+        println(animation);
+       if(turn) {
+           //animation();
+       }
+           background(0);
         stroke(255);
         fill(0);
         int noc;
@@ -40,19 +48,14 @@ public class GUI extends PApplet {
 
         //for animation
 
+        if(animation)
+        {
+            angle+=0.1;
+            println(angle);
+        }
         float h = height/20;
         pushMatrix();
         translate(width/2,0);
-
-        float angle = 0;
-        if(turn) {
-            angle = 0;
-            println("fa");
-            for(int i = 0; i< width*100; ++i) {
-                angle++;
-            }
-            turn = false;
-        }
         beginShape();
         rotateY(angle);
         line(0, height / 20 ,0, height - (height / 20) );
@@ -152,8 +155,24 @@ public class GUI extends PApplet {
         super.keyPressed();
         if(key == 'm')
         {
-            turn = true;
-
+            animation = true;
+            //animation();
+            //stop();
         }
+    }
+
+    boolean animation;
+
+
+    public void animation()
+    {
+
+          for(int i =0; i <8000; ++i)
+          {
+
+
+          }
+        animation = false;
+
     }
 }
