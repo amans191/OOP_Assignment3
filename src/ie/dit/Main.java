@@ -11,10 +11,23 @@ public class Main{
         Text test = new Text("test.txt");
         Text test2 = new Text("");
 
-        test.readText();
+        test.readText(false);
+        test2.readText(false);
 
         String speechTest = "This is a test";
         Speech speech = new Speech(speechTest);
         speech.speak();
+
+        for (String x : test.lines)
+        {
+            Speech speechFromFile = new Speech(x);
+            speechFromFile.speak();
+        }
+        for (String x : test2.lines)
+        {
+            Speech speechFromFile = new Speech(x);
+            speechFromFile.speak();
+        }
+
     }
 }

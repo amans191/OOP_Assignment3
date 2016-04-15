@@ -12,7 +12,7 @@ public class GUI extends PApplet {
 
 
     public void settings() {
-        size(1600, 700 , P3D);
+        size(1200, 700 , P3D);
         turn = false;
     }
 
@@ -53,7 +53,7 @@ public class GUI extends PApplet {
             }
             turn = false;
         }
-        beginShape();;
+        beginShape();
         rotateY(angle);
         line(0, height / 20 ,0, height - (height / 20) );
         stroke(255);
