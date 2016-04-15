@@ -11,10 +11,10 @@
     <orderEntry type="library" name="gluegen-rt" level="application" />
     <orderEntry type="library" name="jogl-all" level="application" />
     <orderEntry type="library" name="core" level="application" />
-    <orderEntry type="library" name="pdfbox-app-2.0.0" level="application" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="library" level="project" />
     <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="library" name="pdfbox-2.0.0" level="project" />
+    <orderEntry type="library" name="pdfbox-app-2.0.0" level="application" />
+    <orderEntry type="library" name="lib" level="application" />
   </component>
 </module>
