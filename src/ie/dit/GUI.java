@@ -53,6 +53,18 @@ public class GUI extends PApplet {
             angle+=0.1;
             println(angle);
         }
+        else if(animationright) {
+                 angle-=0.1;
+                }
+        if( (angle > 8) && (animation==true))
+        {
+            animation = false;
+            //animation = false;
+        }
+        else if( (angle<0.1 && (animationright == true)) )
+        {
+            animationright=false;
+        }
         float h = height/20;
         pushMatrix();
         translate(width/2,0);
@@ -155,13 +167,21 @@ public class GUI extends PApplet {
         super.keyPressed();
         if(key == 'm')
         {
+            angle = 0;
             animation = true;
             //animation();
             //stop();
         }
+        else if (key == 'n')
+        {
+            angle = 8;
+            animationright = true;
+        }
+
     }
 
     boolean animation;
+    boolean animationright;
 
 
     public void animation()
