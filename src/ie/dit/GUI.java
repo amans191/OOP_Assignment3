@@ -65,7 +65,7 @@ public class GUI extends PApplet {
         {
             animationright=false;
         }
-        float h = height/20;
+        float h = height/20;  
         pushMatrix();
         translate(width/2,0);
         beginShape();
