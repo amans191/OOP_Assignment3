@@ -30,7 +30,7 @@ public class GUI extends PApplet {
         colour[1] = color(232,195,136);
         colour[2] = color(252,214,117);
 
-//efe
+
 
         float s = height/20;
         float w = width/2;
