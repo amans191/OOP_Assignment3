@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../../softwares/processing 3/java/lib" />
+      <root url="file://$PROJECT_DIR$/../java libraries/freetts-1/freetts-1.2/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/../../../softwares/processing 3/java/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../java libraries/freetts-1/freetts-1.2/lib" recursive="false" />
   </library>
 </component>
