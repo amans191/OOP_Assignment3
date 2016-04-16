@@ -151,7 +151,12 @@ public class GUI extends PApplet {
             endShape();
         }*/
 
-
+        //elllipse to write curved lines
+        float center = (width/2) + (9*(width/40));
+        float hp = (9*(width/40));
+        stroke(0);
+        point(center,height/2);
+        ellipse(center,height/2,(9*(width/20)),80);
 
     }
 
