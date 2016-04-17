@@ -8,6 +8,8 @@ public class Main{
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI());
 
+        PApplet.runSketch(a, new Mouse());
+
         Text test = new Text("test.txt");
         Text test2 = new Text("");
 
