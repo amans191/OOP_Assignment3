@@ -49,7 +49,7 @@
     </library>
     <library name="video">
       <CLASSES>
-        <root url="jar://$USER_HOME$/Desktop/JavaLibraries/video.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-2.2.1/modes/java/libraries/video/library/video.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
