@@ -80,13 +80,9 @@ public class Main extends JFrame{
 
     public void pros()
     {
+
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load));
-
-        for (String x: test.lines)
-        {
-            System.out.println(x);
-        }
 
         String speechTest = "This is a test";
         Speech speech = new Speech(speechTest);
