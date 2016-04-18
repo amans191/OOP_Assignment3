@@ -153,19 +153,17 @@ public class Text  extends PApplet {
         Page page = new Page(j);
         for( String sentence : Text.split("\n"))
         {
-           // page = new Page(j);
-            page.lines.add( sentence);
-            i++;
-            //println(page.pageno);
-            if(checkfornumber(sentence, j))
+           page.lines.add(sentence);
+
+            //println(sentence);
+
+            if(checkfornumber(sentence,j))
             {
-
                 Pages.add(page);
-                //println(page.pageno);
-                println("j is : " + j);
                 j++;
-                page = new Page(j);
 
+                //println("p end ...............");
+                //i = 0;
             }
         }
 
@@ -175,10 +173,11 @@ public class Text  extends PApplet {
     {
         for (String word: sentence.split(" "))
         {
-            if(isNumeric(word)  && word!=" ")
+            if(isNumeric(word)  && word!=" " && (Integer.parseInt(word) == j+2))
             {
 
                 println(word);
+                println("j is" + j);
                 return true;
             }
         }
