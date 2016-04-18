@@ -40,9 +40,13 @@
         <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-scratchpad-3.14-20160307.jar!/" />
         <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-ooxml-3.14-20160307.jar!/" />
         <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-ooxml-schemas-3.14-20160307.jar!/" />
+        <root url="file://$USER_HOME$/Desktop/JavaLibraries/poi-3.14" />
       </CLASSES>
-      <JAVADOC />
+      <JAVADOC>
+        <root url="file://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/docs/apidocs" />
+      </JAVADOC>
       <SOURCES />
+      <jarDirectory url="file://$USER_HOME$/Desktop/JavaLibraries/poi-3.14" recursive="false" />
     </library>
   </component>
 </application>
