@@ -1,5 +1,6 @@
 package ie.dit;
 
+import com.github.sarxos.webcam.Webcam;
 import processing.core.PApplet;
 
 import javax.swing.*;
@@ -73,9 +74,11 @@ public class Main extends JFrame{
         gui.setVisible(true);
         gui.setTitle("Book Reader");
 
-        Camera camera = new Camera();
-        camera.testCamera();
+        Webcam webcam = null;
+
+        Camera camera = new Camera(webcam);
         camera.detectMotion();
+        camera.webcamPanel();
 
     }
 
