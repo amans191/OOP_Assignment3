@@ -89,6 +89,7 @@ public class Main extends JFrame{
 
     public void pros()
     {
+
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load));
 

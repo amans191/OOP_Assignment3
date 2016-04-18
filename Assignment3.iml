@@ -16,5 +16,6 @@
     <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" name="lib" level="application" />
     <orderEntry type="library" name="library" level="application" />
+    <orderEntry type="library" name="poi-3.14-20160307" level="application" />
   </component>
 </module>
