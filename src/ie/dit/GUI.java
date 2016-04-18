@@ -46,7 +46,6 @@ public class GUI extends PApplet {
         colour[2] = color(252,214,117);
 
 
-
         float s = height/20;
         float w = width/2;
         //float h = height - s;
@@ -157,6 +156,7 @@ public class GUI extends PApplet {
 
             endShape();
         }*/
+       
 
         //elllipse to write curved lines
         float center = (width/2) + (9*(width/40));

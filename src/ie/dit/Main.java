@@ -8,7 +8,7 @@ public class Main{
         Text test = new Text("");
 
         String[] a = {"MAIN"};
-        PApplet.runSketch(a, new GUI(test));
+       // PApplet.runSketch(a, new GUI(test));
 
         String speechTest = "This is a test";
         Speech speech = new Speech(speechTest);
