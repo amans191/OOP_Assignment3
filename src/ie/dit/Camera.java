@@ -8,9 +8,11 @@ import java.awt.*;
 public class Camera implements WebcamMotionListener{
 
     Webcam webcam;
+    Point p;
 
     Camera(Webcam webcam){
         this.webcam = Webcam.getDefault();
+        this.p = null;
         //webcam.setViewSize(new Dimension(320, 240));
     }
 
@@ -36,8 +38,13 @@ public class Camera implements WebcamMotionListener{
         detector.start();
     }
 
+    public double returnX() {
+        return p.getX();
+    }
+
     @Override
     public void motionDetected(WebcamMotionEvent wme) {
-        //System.out.println("Detected motion I, alarm turn on you have");
+        p = wme.getCog();
+        System.out.println(p.getX());
     }
 }

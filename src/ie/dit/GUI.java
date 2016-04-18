@@ -2,8 +2,8 @@ package ie.dit;
 
 import processing.core.*;
 //import processing.video.*;
+import java.awt.*;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 
 /**
  * Created by Eoin on 07/03/2016.
@@ -11,13 +11,15 @@ import java.util.ArrayList;
 public class GUI extends PApplet {
 
     Text test;
+    Camera camera;
+    Point p;
     int x;
 
-
-    public GUI(Text test){
+    public GUI(Text test, Camera camera){
         this.test = test;
+        this.camera = camera;
+        this.p = camera.p;
         this.x = 0;
-        // = new ArrayList<>();
     }
 
     public void settings() {
@@ -25,6 +27,9 @@ public class GUI extends PApplet {
         turn = false;
         animation = false;
         angle = 0;
+
+        camera.detectMotion();
+        camera.webcamPanel();
     }
 
     public float angle ;
@@ -54,6 +59,15 @@ public class GUI extends PApplet {
         //curve(w,height, w,h, width-(width/20), h-5, width,height);
 
         //for animation
+
+        //System.out.println(camera.returnX());
+
+        if (camera.returnX() <= 40 && camera.returnX()>= 0)
+        {
+           // System.out.println(p.getX());
+            angle = 8;
+            animationright = true;
+        }
 
         if(animation)
         {
