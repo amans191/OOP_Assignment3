@@ -2,11 +2,10 @@
   <component name="libraryTable">
     <library name="core">
       <CLASSES>
-        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core" />
+        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-2.2.1/core/library/core.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
-      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core" recursive="false" />
     </library>
     <library name="lib">
       <CLASSES>
