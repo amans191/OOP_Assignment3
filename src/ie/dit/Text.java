@@ -5,10 +5,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.deploy.util.StringUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
+import org.apache.poi.ss.formula.functions.BaseNumberUtils;
+import org.apache.poi.util.StringUtil;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
@@ -112,9 +115,11 @@ public class Text  extends PApplet {
     {
         int i = 10;
         int w = 100;
+
+        //textSize(45);
         for (String x:lines)
         {
-            System.out.println(x);
+            //System.out.println(x);
             gui.text(x, w, i * 10);
             if (i * 10 <= 600){
                 i++;
@@ -127,10 +132,10 @@ public class Text  extends PApplet {
         }
         if (words) {
             for (String x : lines) {
-                ArrayList<String> returnedSentence = splitSentence(x);
-                for (String xx : returnedSentence) {
-                    System.out.println(xx);
-                }
+               ArrayList<String> returnedSentence = splitSentence(x);
+                //for (String xx : returnedSentence) {
+                    //System.out.println(x);
+                //}
             }
         }
     }
@@ -141,6 +146,8 @@ public class Text  extends PApplet {
         for (String word: sentence.split(" "))
         {
             words.add(word);
+            println(isNumeric(word));
+            println(word);
         }
         return words;
     }
@@ -148,10 +155,21 @@ public class Text  extends PApplet {
     public ArrayList<String> splitFile(String textToBeSplit)
     {
         ArrayList<String> sentences = new ArrayList<>();
-        for (String sentence : textToBeSplit.split("\n"))
-        {
+        for (String sentence : textToBeSplit.split("\n")) {
             sentences.add(sentence);
+
+            //println(sentence);
+
         }
         return sentences;
+    }
+
+    public static boolean isNumeric(String str)
+    {
+        for (char c : str.toCharArray())
+        {
+            if (!Character.isDigit(c)) return false;
+        }
+        return true;
     }
 }
