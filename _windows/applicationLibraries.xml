@@ -1,29 +1,5 @@
 <application>
   <component name="libraryTable">
-    <library name="core">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/core.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt-natives-linux-amd64.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt-natives-linux-armv6hf.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt-natives-linux-i586.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt-natives-macosx-universal.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt-natives-windows-amd64.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt-natives-windows-i586.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-rt.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all-natives-linux-amd64.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all-natives-linux-armv6hf.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all-natives-linux-i586.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all-natives-macosx-universal.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all-natives-windows-amd64.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all-natives-windows-i586.jar!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-all.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/gluegen-java-src.zip!/" />
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library/jogl-java-src.zip!/" />
-      </SOURCES>
-    </library>
     <library name="lib">
       <CLASSES>
         <root url="file://$USER_HOME$/Desktop/JavaLibraries/freetts-1.2/lib" />
@@ -31,6 +7,17 @@
       <JAVADOC />
       <SOURCES />
       <jarDirectory url="file://$USER_HOME$/Desktop/JavaLibraries/freetts-1.2/lib" recursive="false" />
+    </library>
+    <library name="library">
+      <CLASSES>
+        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library" />
+      </SOURCES>
+      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library" recursive="false" />
+      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core/library" recursive="false" type="SOURCES" />
     </library>
     <library name="minim">
       <CLASSES>
@@ -47,9 +34,12 @@
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="video">
+    <library name="poi-3.14-20160307">
       <CLASSES>
-        <root url="jar://$USER_HOME$/Desktop/College/Year 2/OOP/processing-2.2.1/modes/java/libraries/video/library/video.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-3.14-20160307.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-scratchpad-3.14-20160307.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-ooxml-schemas-3.14-20160307.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/JavaLibraries/poi-3.14/poi-ooxml-3.14-20160307.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

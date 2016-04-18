@@ -79,12 +79,18 @@ public class Text  extends PApplet {
     public void readText(boolean words, GUI gui)
     {
         int i = 10;
+        int w = 100;
         for (String x:lines)
         {
             System.out.println(x);
-            gui.text(x, 100, i * 10);
+            gui.text(x, w, i * 10);
             if (i * 10 <= 600){
                 i++;
+            }
+            else
+            {
+                i = 10;
+                w = 650;
             }
         }
         if (words) {
