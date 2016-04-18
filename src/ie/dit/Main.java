@@ -12,6 +12,13 @@ public class Main extends JFrame{
 
     JButton finish, choose, settings;
     JLabel title, filechoosen;
+
+    Text load;
+
+    Webcam webcam = null;
+
+    Camera camera = new Camera(webcam);
+
     public Main()
     {
         setLayout(new GridBagLayout());
@@ -70,23 +77,18 @@ public class Main extends JFrame{
 
         Main gui = new Main();
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.setSize(300,300);
+        gui.setSize(300, 300);
         gui.setVisible(true);
         gui.setTitle("Book Reader");
 
-        Webcam webcam = null;
-
-        Camera camera = new Camera(webcam);
-        camera.detectMotion();
-        camera.webcamPanel();
-
+        //camera.detectMotion();
+        //camera.webcamPanel();
     }
-
-    Text load;
 
     public void choosefile()
     {
         load = new Text("");
+
         //book = new ArrayList<>();
         //book = load.lines;
 
@@ -96,7 +98,7 @@ public class Main extends JFrame{
     public void pros()
     {
         String[] a = {"MAIN"};
-        PApplet.runSketch(a, new GUI(load));
+        PApplet.runSketch(a, new GUI(load, camera));
 
     }
 }
