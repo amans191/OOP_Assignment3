@@ -56,7 +56,7 @@ public class Text  extends PApplet {
             String text=textStripper.getText(document);
             document.close();
             lines = splitFile(text);
-            //Add(text);
+            Add(text);
         }
         catch (IOException e){
             e.printStackTrace();
@@ -150,12 +150,29 @@ public class Text  extends PApplet {
         //Pages = new ArrayList<>();
         int j=0;
         int i =0;
-        new Page(j);
-        for( String sent : Text.split("\n"))
+        Page page = new Page(j);
+        for( String sentence : Text.split("\n"))
         {
-
+            page.lines[i] = sentence;
+            i++;
+            if(checkfornumber(sentence))
+            {
+                Pages.add(page);
+            }
         }
 
+    }
+
+    public boolean checkfornumber( String sentence)
+    {
+        for (String word: sentence.split(" "))
+        {
+            if(isNumeric(word))
+            {
+                return true
+            }
+        }
+        return false;
     }
 
     public ArrayList<String> splitSentence(String sentence)
