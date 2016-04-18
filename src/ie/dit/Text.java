@@ -21,6 +21,7 @@ import processing.core.PApplet;
 public class Text  extends PApplet {
 
     ArrayList<String> lines = new ArrayList<>();
+    ArrayList<Page> Pages = new ArrayList<>();
 
     public Text(String fileName)
     {
@@ -55,6 +56,7 @@ public class Text  extends PApplet {
             String text=textStripper.getText(document);
             document.close();
             lines = splitFile(text);
+            //Add(text);
         }
         catch (IOException e){
             e.printStackTrace();
@@ -138,6 +140,22 @@ public class Text  extends PApplet {
                 //}
             }
         }
+    }
+
+    //int j;
+    //GUI gui;
+    //ArrayList<Page> Pages;
+    public void Add(String Text)
+    {
+        //Pages = new ArrayList<>();
+        int j=0;
+        int i =0;
+        new Page(j);
+        for( String sent : Text.split("\n"))
+        {
+
+        }
+
     }
 
     public ArrayList<String> splitSentence(String sentence)

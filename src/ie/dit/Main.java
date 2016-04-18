@@ -87,6 +87,7 @@ public class Main extends JFrame{
     public void choosefile()
     {
         load = new Text("");
+
         //book = new ArrayList<>();
         //book = load.lines;
 

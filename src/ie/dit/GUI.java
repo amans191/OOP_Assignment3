@@ -3,6 +3,7 @@ package ie.dit;
 import processing.core.*;
 //import processing.video.*;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 /**
  * Created by Eoin on 07/03/2016.
@@ -12,9 +13,11 @@ public class GUI extends PApplet {
     Text test;
     int x;
 
+
     public GUI(Text test){
         this.test = test;
         this.x = 0;
+        // = new ArrayList<>();
     }
 
     public void settings() {
