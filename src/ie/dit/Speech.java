@@ -14,7 +14,7 @@ public class Speech {
         this.text = text;
     }
 
-    public void speak(){
+    public void say(){
         Voice voice;
         VoiceManager voiceManager = VoiceManager.getInstance();
         voice = voiceManager.getVoice(VOICENAME_kevin);

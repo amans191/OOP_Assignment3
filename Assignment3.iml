@@ -15,6 +15,7 @@
     <orderEntry type="library" name="Java" level="project" />
     <orderEntry type="library" name="library" level="project" />
     <orderEntry type="library" name="pdfbox-2.0.0" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="lib" level="application" />
+    <orderEntry type="library" name="video" level="application" />
   </component>
 </module>

@@ -108,7 +108,6 @@ public class Text  extends PApplet {
         for (String sentence : textToBeSplit.split("\n"))
         {
             sentences.add(sentence);
-            System.out.println(sentence);
         }
         return sentences;
     }

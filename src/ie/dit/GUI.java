@@ -9,7 +9,12 @@ import java.awt.event.KeyListener;
  */
 public class GUI extends PApplet {
 
+    Text test;
 
+    public GUI(Text test){
+        this.test = test;
+        test.readText(false);
+    }
 
     public void settings() {
         size(1200, 700 , P3D);
@@ -24,7 +29,7 @@ public class GUI extends PApplet {
 
     public void draw(){
 
-        println(animation);
+        //println(animation);
        if(turn) {
            //animation();
        }
@@ -51,7 +56,7 @@ public class GUI extends PApplet {
         if(animation)
         {
             angle+=0.1;
-            println(angle);
+           // println(angle);
         }
         else if(animationright) {
                  angle-=0.1;
@@ -181,6 +186,14 @@ public class GUI extends PApplet {
         {
             angle = 8;
             animationright = true;
+        }
+        else if (key == 's')
+        {
+            for (String x : test.lines)
+            {
+                Speech speechFromFile = new Speech(x);
+                speechFromFile.say();
+            }
         }
 
     }
