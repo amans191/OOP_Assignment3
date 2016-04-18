@@ -181,7 +181,7 @@ public class GUI extends PApplet {
         ellipse(center,height/2,(9*(width/20)),80);
 
         fill(0);
-        test.readText(false, this);
+        test.readText(true, this);
 
     }
 
