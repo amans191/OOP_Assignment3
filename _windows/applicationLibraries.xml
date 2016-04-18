@@ -1,5 +1,13 @@
 <application>
   <component name="libraryTable">
+    <library name="core">
+      <CLASSES>
+        <root url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/core" recursive="false" />
+    </library>
     <library name="lib">
       <CLASSES>
         <root url="file://$USER_HOME$/Desktop/JavaLibraries/freetts-1.2/lib" />
@@ -26,6 +34,13 @@
       <JAVADOC />
       <SOURCES />
       <jarDirectory url="file://$USER_HOME$/Desktop/College/Year 2/OOP/processing-3.0.1/Minim-2.2.0/library" recursive="false" />
+    </library>
+    <library name="openkinect_processing">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Downloads/Documents/Processing/libraries/openkinect_processing/library/openkinect_processing.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
     </library>
     <library name="pdfbox-app-2.0.0">
       <CLASSES>
