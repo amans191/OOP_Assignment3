@@ -5,6 +5,11 @@ package ie.dit;
  */
 public class Page {
 
+    int pageno;
+    int nooflines;
+    String[nooflines] lines;
+
+
 
 }
 
