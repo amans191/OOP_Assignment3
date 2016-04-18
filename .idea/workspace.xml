@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16e940bd-641f-4a8b-bc72-f8d283f94be3" name="Default" comment="Now prints to second page, if longer than two pages still is not perfect.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_scratchpad_3_14_20160307.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_scratchpad_3_14_201603071.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/Main.class" afterPath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/Text.class" afterPath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/Text.class" />
+    <list default="true" id="16e940bd-641f-4a8b-bc72-f8d283f94be3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ie/dit/Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/GUI.class" afterPath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/GUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assignment3.iml" afterPath="$PROJECT_DIR$/Assignment3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/GUI.java" afterPath="$PROJECT_DIR$/src/ie/dit/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/Text.java" afterPath="$PROJECT_DIR$/src/ie/dit/Text.java" />
     </list>
     <ignored path="Assignment3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="191">
               <caret line="166" column="26" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
               <folding />
             </state>
@@ -65,11 +60,21 @@
       <file leaf-file-name="Text.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/dit/Text.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="-91">
               <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Page.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ie/dit/Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,6 +111,7 @@
         <option value="$PROJECT_DIR$/src/ie/dit/Main.java" />
         <option value="$PROJECT_DIR$/src/ie/dit/Text.java" />
         <option value="$PROJECT_DIR$/src/ie/dit/GUI.java" />
+        <option value="$PROJECT_DIR$/src/ie/dit/Page.java" />
       </list>
     </option>
   </component>
@@ -669,7 +675,7 @@
       <workItem from="1460982788733" duration="540000" />
       <workItem from="1460983396887" duration="608000" />
       <workItem from="1460984043947" duration="2703000" />
-      <workItem from="1460988786999" duration="5117000" />
+      <workItem from="1460988786999" duration="6835000" />
     </task>
     <task id="LOCAL-00001" summary="book first try&#10;">
       <created>1458660622588</created>
@@ -755,11 +761,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460977636319</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="&#10;kjb">
+      <created>1460996172252</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1460996172252</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55966000" />
+    <option name="totallyTimeSpent" value="57684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -770,10 +783,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3170347" sideWeight="0.3455344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38170347" sideWeight="0.11200586" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.11200586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252818" sideWeight="0.4614221" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38170347" sideWeight="0.88799417" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.88799417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31388012" sideWeight="0.4795022" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -808,12 +821,13 @@
     <MESSAGE value="book1&#10;" />
     <MESSAGE value="Added the ability to determine pdf files from other types of files. As of now, pdf files can still not be read in.&#10;" />
     <MESSAGE value="PDFs can now be loaded to the output stream, will begin work on parsing them into sentences." />
-    <MESSAGE value="&#10;" />
     <MESSAGE value=".&#10;" />
     <MESSAGE value="ihvsr" />
     <MESSAGE value="nonstop turn&#10;" />
     <MESSAGE value="Now prints to second page, if longer than two pages still is not perfect." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now prints to second page, if longer than two pages still is not perfect." />
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="&#10;kjb" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;kjb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -824,16 +838,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ie/dit/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/dit/Speech.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1221,9 +1225,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="166" column="26" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/dit/Text.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="-91">
           <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1231,10 +1243,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
+    <entry file="file://$PROJECT_DIR$/src/ie/dit/Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="166" column="26" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
