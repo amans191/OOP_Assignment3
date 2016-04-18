@@ -47,12 +47,21 @@ public class Main extends JFrame{
         l.gridx = 3;
         l.gridy = 2;
         add(finish,l);
+        event2 fin = new event2();
+        finish.addActionListener(fin);
     }
 
     public class event implements ActionListener{
 
         public void actionPerformed(ActionEvent e){
             choosefile();
+        }
+
+    }
+
+    public class event2 implements  ActionListener{
+        public void actionPerformed(ActionEvent fin) {
+            pros();
         }
     }
 
