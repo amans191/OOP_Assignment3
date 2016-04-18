@@ -3,10 +3,17 @@ package ie.dit;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.poi.hwpf.HWPFDocument;
+import org.apache.poi.hwpf.extractor.WordExtractor;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import processing.core.PApplet;
+
 
 public class Text  extends PApplet {
 
@@ -51,6 +58,27 @@ public class Text  extends PApplet {
         }
     }
 
+    public void loadDocxFile(File selection)
+    {
+        System.out.println(selection);
+        try{
+            FileInputStream fis = new FileInputStream(selection.getAbsolutePath());
+
+            XWPFDocument document = new XWPFDocument(fis);
+
+            List<XWPFParagraph> paragraphs = document.getParagraphs();
+
+
+            for (XWPFParagraph para : paragraphs) {
+                lines.add(para.getText());
+            }
+            fis.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
     public void fileDialog(File selection) {
         if (selection == null)
         {
@@ -68,6 +96,10 @@ public class Text  extends PApplet {
             if (fileType.equals("pdf"))
             {
                 loadPDFFile(selection);
+            }
+            else if (fileType.equals("docx"))
+            {
+                loadDocxFile(selection);
             }
             else
             {
