@@ -5,6 +5,7 @@ import processing.core.PApplet;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Main extends JFrame{
 
@@ -66,10 +67,13 @@ public class Main extends JFrame{
 
     }
 
+    Text load;
+
     public void choosefile()
     {
-        Text test = new Text("");
-
+        load = new Text("");
+        //book = new ArrayList<>();
+        //book = load.lines;
 
     }
 
@@ -77,7 +81,7 @@ public class Main extends JFrame{
     public void pros()
     {
         String[] a = {"MAIN"};
-        //PApplet.runSketch(a, new GUI(test));
+        PApplet.runSketch(a, new GUI(load));
 
         String speechTest = "This is a test";
         Speech speech = new Speech(speechTest);
