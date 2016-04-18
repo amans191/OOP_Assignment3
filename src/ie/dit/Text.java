@@ -111,7 +111,6 @@ public class Text  extends PApplet {
         int w = 100;
         for (String x:lines)
         {
-            System.out.println(x);
             gui.text(x, w, i * 10);
             if (i * 10 <= 600){
                 i++;
