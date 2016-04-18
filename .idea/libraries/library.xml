@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="library">
     <CLASSES>
-      <root url="file://$USER_HOME$/Documents/Processing/libraries/video/library" />
+      <root url="file:///Applications/Processing.app/Contents/Java/core/library" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$USER_HOME$/Documents/Processing/libraries/video/library" recursive="false" />
+    <jarDirectory url="file:///Applications/Processing.app/Contents/Java/core/library" recursive="false" />
   </library>
 </component>
