@@ -153,11 +153,16 @@ public class Text  extends PApplet {
         Page page = new Page(j);
         for( String sentence : Text.split("\n"))
         {
+            page = new Page(j);
             page.lines[i] = sentence;
             i++;
+            println(page.pageno);
             if(checkfornumber(sentence))
             {
                 Pages.add(page);
+                j++;
+                page = new Page(j);
+
             }
         }
 
@@ -169,7 +174,7 @@ public class Text  extends PApplet {
         {
             if(isNumeric(word))
             {
-                return true
+                return true;
             }
         }
         return false;

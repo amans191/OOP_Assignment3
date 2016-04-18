@@ -38,6 +38,6 @@ public class Camera implements WebcamMotionListener{
 
     @Override
     public void motionDetected(WebcamMotionEvent wme) {
-        System.out.println("Detected motion I, alarm turn on you have");
+        //System.out.println("Detected motion I, alarm turn on you have");
     }
 }
