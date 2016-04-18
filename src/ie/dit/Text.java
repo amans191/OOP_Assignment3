@@ -76,11 +76,16 @@ public class Text  extends PApplet {
         }
     }
 
-    public void readText(boolean words)
+    public void readText(boolean words, GUI gui)
     {
+        int i = 10;
         for (String x:lines)
         {
             System.out.println(x);
+            gui.text(x, 100, i * 10);
+            if (i * 10 <= 600){
+                i++;
+            }
         }
         if (words) {
             for (String x : lines) {
