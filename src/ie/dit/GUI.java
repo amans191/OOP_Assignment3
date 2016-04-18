@@ -14,7 +14,6 @@ public class GUI extends PApplet {
 
     public GUI(Text test){
         this.test = test;
-        test.readText(false);
         this.x = 0;
     }
 
@@ -44,8 +43,6 @@ public class GUI extends PApplet {
         colour[0] = color(219,150,98);
         colour[1] = color(232,195,136);
         colour[2] = color(252,214,117);
-
-
 
         float s = height/20;
         float w = width/2;
@@ -164,6 +161,9 @@ public class GUI extends PApplet {
         stroke(0);
         point(center,height/2);
         ellipse(center,height/2,(9*(width/20)),80);
+
+        fill(0);
+        test.readText(false, this);
 
     }
 
