@@ -153,13 +153,16 @@ public class Text  extends PApplet {
         Page page = new Page(j);
         for( String sentence : Text.split("\n"))
         {
-            page = new Page(j);
-            page.lines[i] = sentence;
+           // page = new Page(j);
+            page.lines.add( sentence);
             i++;
-            println(page.pageno);
-            if(checkfornumber(sentence))
+            //println(page.pageno);
+            if(checkfornumber(sentence, j))
             {
+
                 Pages.add(page);
+                //println(page.pageno);
+                println("j is : " + j);
                 j++;
                 page = new Page(j);
 
@@ -168,12 +171,14 @@ public class Text  extends PApplet {
 
     }
 
-    public boolean checkfornumber( String sentence)
+    public boolean checkfornumber( String sentence, int j)
     {
         for (String word: sentence.split(" "))
         {
-            if(isNumeric(word))
+            if(isNumeric(word)  && word!=" ")
             {
+
+                println(word);
                 return true;
             }
         }
@@ -186,7 +191,7 @@ public class Text  extends PApplet {
         for (String word: sentence.split(" "))
         {
             words.add(word);
-            println(isNumeric(word));
+            println("pg"+isNumeric(word));
             println(word);
         }
         return words;
@@ -206,10 +211,6 @@ public class Text  extends PApplet {
 
     public static boolean isNumeric(String str)
     {
-        for (char c : str.toCharArray())
-        {
-            if (!Character.isDigit(c)) return false;
-        }
-        return true;
+        return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 }
