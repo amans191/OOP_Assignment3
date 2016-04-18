@@ -10,10 +10,12 @@ import java.awt.event.KeyListener;
 public class GUI extends PApplet {
 
     Text test;
+    int x;
 
     public GUI(Text test){
         this.test = test;
         test.readText(false);
+        this.x = 0;
     }
 
     public void settings() {
@@ -189,11 +191,9 @@ public class GUI extends PApplet {
         }
         else if (key == 's')
         {
-            for (String x : test.lines)
-            {
-                Speech speechFromFile = new Speech(x);
-                speechFromFile.say();
-            }
+            Speech speechFromFile = new Speech(test.lines.get(x));
+            speechFromFile.say();
+            x++;
         }
 
     }

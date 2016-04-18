@@ -13,7 +13,7 @@ public class Speech {
     public Speech(String text){
         this.text = text;
     }
-
+    
     public void say(){
         Voice voice;
         VoiceManager voiceManager = VoiceManager.getInstance();
