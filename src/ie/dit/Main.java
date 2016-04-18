@@ -73,6 +73,9 @@ public class Main extends JFrame{
         gui.setVisible(true);
         gui.setTitle("Book Reader");
 
+        Camera camera = new Camera();
+        camera.testCamera();
+        camera.detectMotion();
 
     }
 
@@ -89,12 +92,8 @@ public class Main extends JFrame{
 
     public void pros()
     {
-
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load));
 
-        String speechTest = "This is a test";
-        Speech speech = new Speech(speechTest);
-        speech.say();
     }
 }
