@@ -34,8 +34,8 @@ public class GUI extends PApplet {
         animation = false;
         angle = 0;
 
-        camera.detectMotion();
-       camera.webcamPanel();
+        //camera.detectMotion();
+        //camera.webcamPanel();
     }
 
     public float angle ;
@@ -67,19 +67,18 @@ public class GUI extends PApplet {
         //for animation
 
         //System.out.println(camera.returnX());
-/*
-        if (camera.returnX() <= 40 && camera.returnX()>= 0)
-        {
-           // System.out.println(p.getX());
-            angle = 8;
-            animationright = true;
+
+        if (camera.cameraOn) {
+            if (camera.returnX() <= 40 && camera.returnX() >= 0) {
+                // System.out.println(p.getX());
+                angle = 8;
+                animationright = true;
+            } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
+                angle = 0;
+                animation = true;
+            }
         }
-        else if (camera.returnX() <= 170 && camera.returnX() >= 130)
-        {
-            angle = 0;
-            animation = true;
-        }
-*/
+
         if(animation)
         {
             angle+=0.1;

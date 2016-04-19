@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Main extends JFrame{
 
-    JButton finish, choose, settings;
+    JButton finish, choose, settings, openCamera;
     JLabel title, filechoosen;
 
     Text load;
@@ -57,6 +57,15 @@ public class Main extends JFrame{
         add(finish,l);
         event2 fin = new event2();
         finish.addActionListener(fin);
+
+        openCamera = new JButton("Camera");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 3;
+        add(openCamera, l);
+        event3 cameraEvent = new event3();
+        openCamera.addActionListener(cameraEvent);
+
     }
 
     public class event implements ActionListener{
@@ -70,6 +79,12 @@ public class Main extends JFrame{
     public class event2 implements  ActionListener{
         public void actionPerformed(ActionEvent fin) {
             pros();
+        }
+    }
+
+    public class event3 implements ActionListener{
+        public void actionPerformed(ActionEvent cameraEvent) {
+            camera();
         }
     }
 
@@ -101,5 +116,19 @@ public class Main extends JFrame{
         PApplet.runSketch(a, new GUI(load, camera));
         //load.read();
 
+    }
+
+    public void camera()
+    {
+        if (camera.cameraOn)
+        {
+            camera.stopMotionDetection();
+        }
+        else
+        {
+            camera.webcamPanel();
+            camera.detectMotion();
+            camera.startMotionDetection();
+        }
     }
 }
