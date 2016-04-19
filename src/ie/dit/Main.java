@@ -1,20 +1,26 @@
 package ie.dit;
 
+//webcam library
 import com.github.sarxos.webcam.Webcam;
+
+//processing library
 import processing.core.PApplet;
 
+//camera libraries
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Main extends JFrame{
 
-    JButton finish, choose, settings;
+    //main menu code
+    JButton finish, choose, settings, openCamera;
     JLabel title, filechoosen;
 
+    //text class
     Text load;
 
+    //camera class
     Webcam webcam = null;
 
     Camera camera = new Camera(webcam);
@@ -24,6 +30,7 @@ public class Main extends JFrame{
         setLayout(new GridBagLayout());
         GridBagConstraints l = new GridBagConstraints();
 
+        //buttons
         title = new JLabel("BOOK READER");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 2;
@@ -57,6 +64,15 @@ public class Main extends JFrame{
         add(finish,l);
         event2 fin = new event2();
         finish.addActionListener(fin);
+
+        openCamera = new JButton("Camera");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 3;
+        add(openCamera, l);
+        event3 cameraEvent = new event3();
+        openCamera.addActionListener(cameraEvent);
+
     }
 
     public class event implements ActionListener{
@@ -70,6 +86,12 @@ public class Main extends JFrame{
     public class event2 implements  ActionListener{
         public void actionPerformed(ActionEvent fin) {
             pros();
+        }
+    }
+
+    public class event3 implements ActionListener{
+        public void actionPerformed(ActionEvent cameraEvent) {
+            camera();
         }
     }
 
@@ -101,5 +123,19 @@ public class Main extends JFrame{
         PApplet.runSketch(a, new GUI(load, camera));
         //load.read();
 
+    }
+
+    public void camera()
+    {
+        if (camera.cameraOn)
+        {
+            camera.stopMotionDetection();
+        }
+        else
+        {
+            camera.webcamPanel();
+            camera.detectMotion();
+            camera.startMotionDetection();
+        }
     }
 }

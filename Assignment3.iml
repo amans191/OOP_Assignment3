@@ -10,15 +10,14 @@
     <orderEntry type="library" name="Assignment3Libraries" level="application" />
     <orderEntry type="library" name="pdfbox-app-2.0.0" level="application" />
     <orderEntry type="library" name="Java" level="project" />
-    <orderEntry type="library" name="pdfbox-2.0.0" level="project" />
     <orderEntry type="library" name="gluegen-rt" level="project" />
     <orderEntry type="library" name="jogl-all" level="project" />
     <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="library" name="lib" level="application" />
-    <orderEntry type="library" name="library" level="application" />
     <orderEntry type="library" name="poi-3.14-20160307" level="application" />
-    <orderEntry type="library" name="poi-3" level="application" />
     <orderEntry type="library" name="webcam-capture-0.3.10" level="application" />
-    <orderEntry type="library" name="webcam-capture-0.3.101" level="project" />
+    <orderEntry type="library" name="library" level="application" />
+    <orderEntry type="library" name="pdfbox-2.0.0" level="application" />
+    <orderEntry type="library" name="lib" level="application" />
+    <orderEntry type="library" name="poi-scratchpad-3.14-20160307" level="application" />
   </component>
 </module>
