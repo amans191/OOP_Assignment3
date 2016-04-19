@@ -5,14 +5,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.deploy.util.StringUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.apache.poi.hwpf.HWPFDocument;
-import org.apache.poi.hwpf.extractor.WordExtractor;
-import org.apache.poi.ss.formula.functions.BaseNumberUtils;
-import org.apache.poi.util.StringUtil;
-import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import processing.core.PApplet;
@@ -176,7 +170,7 @@ public class Text  extends PApplet {
             if(isNumeric(word)  && word!=" " && (Integer.parseInt(word) == j+2))
             {
 
-                println(word);
+                //println(word);
                 println("j is" + j);
                 return true;
             }
@@ -190,8 +184,8 @@ public class Text  extends PApplet {
         for (String word: sentence.split(" "))
         {
             words.add(word);
-            println("pg"+isNumeric(word));
-            println(word);
+            //println("pg"+isNumeric(word));
+            //println(word);
         }
         return words;
     }
