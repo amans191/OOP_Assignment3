@@ -35,7 +35,7 @@ public class GUI extends PApplet {
         angle = 0;
 
         camera.detectMotion();
-        camera.webcamPanel();
+       camera.webcamPanel();
     }
 
     public float angle ;
@@ -67,7 +67,7 @@ public class GUI extends PApplet {
         //for animation
 
         //System.out.println(camera.returnX());
-
+/*
         if (camera.returnX() <= 40 && camera.returnX()>= 0)
         {
            // System.out.println(p.getX());
@@ -79,7 +79,7 @@ public class GUI extends PApplet {
             angle = 0;
             animation = true;
         }
-
+*/
         if(animation)
         {
             angle+=0.1;
@@ -199,6 +199,7 @@ public class GUI extends PApplet {
         //code to print onto pages
         //left page
         int i =0;
+
         for( String x : Pages.get(pn).lines)
         {
             //println(x);
@@ -207,10 +208,13 @@ public class GUI extends PApplet {
         }
 
         //right page
-        for(String x :Pages.get(pn).lines)
+        i=0;
+        for(String x :Pages.get(pn+1).lines)
         {
             text(x,(width/2)+40,(height/20)+40+(i*15));
+            i++;
         }
+
 
     }
 
@@ -228,6 +232,8 @@ public class GUI extends PApplet {
         {
             angle = 0;
             animation = true;
+            if(pn-2 >0)
+            pn-=2;
             //animation();
             //stop();
         }
@@ -235,6 +241,8 @@ public class GUI extends PApplet {
         {
             angle = 8;
             animationright = true;
+            if(pn+2 <= Pages.size())
+            pn+=2;
         }
         else if (key == 's')
         {
