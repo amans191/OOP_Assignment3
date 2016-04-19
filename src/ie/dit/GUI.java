@@ -68,6 +68,11 @@ public class GUI extends PApplet {
             angle = 8;
             animationright = true;
         }
+        else if (camera.returnX() <= 170 && camera.returnX() >= 130)
+        {
+            angle = 0;
+            animation = true;
+        }
 
         if(animation)
         {

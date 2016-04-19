@@ -5,14 +5,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.deploy.util.StringUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.apache.poi.hwpf.HWPFDocument;
-import org.apache.poi.hwpf.extractor.WordExtractor;
-import org.apache.poi.ss.formula.functions.BaseNumberUtils;
-import org.apache.poi.util.StringUtil;
-import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import processing.core.PApplet;
@@ -153,27 +147,31 @@ public class Text  extends PApplet {
         Page page = new Page(j);
         for( String sentence : Text.split("\n"))
         {
-            page = new Page(j);
-            page.lines[i] = sentence;
-            i++;
-            println(page.pageno);
-            if(checkfornumber(sentence))
+           page.lines.add(sentence);
+
+            //println(sentence);
+
+            if(checkfornumber(sentence,j))
             {
                 Pages.add(page);
                 j++;
-                page = new Page(j);
 
+                //println("p end ...............");
+                //i = 0;
             }
         }
 
     }
 
-    public boolean checkfornumber( String sentence)
+    public boolean checkfornumber( String sentence, int j)
     {
         for (String word: sentence.split(" "))
         {
-            if(isNumeric(word))
+            if(isNumeric(word)  && word!=" " && (Integer.parseInt(word) == j+2))
             {
+
+                //println(word);
+                println("j is" + j);
                 return true;
             }
         }
@@ -186,8 +184,8 @@ public class Text  extends PApplet {
         for (String word: sentence.split(" "))
         {
             words.add(word);
-            println(isNumeric(word));
-            println(word);
+            //println("pg"+isNumeric(word));
+            //println(word);
         }
         return words;
     }
@@ -206,10 +204,6 @@ public class Text  extends PApplet {
 
     public static boolean isNumeric(String str)
     {
-        for (char c : str.toCharArray())
-        {
-            if (!Character.isDigit(c)) return false;
-        }
-        return true;
+        return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 }
