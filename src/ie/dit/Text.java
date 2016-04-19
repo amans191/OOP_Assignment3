@@ -180,8 +180,8 @@ public class Text  extends PApplet {
             if(isNumeric(word)  && word!=" " && (Integer.parseInt(word) == j+2))
             {
 
-                println(word);
-                println("j is" + j);
+                //println(word);
+                //println("j is" + j);
                 return true;
             }
         }

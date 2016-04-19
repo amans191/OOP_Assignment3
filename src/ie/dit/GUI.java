@@ -29,7 +29,7 @@ public class GUI extends PApplet {
 
     int pn ;
     public void settings() {
-        size(1200, 700 , P3D);
+        size(1400, 600 , P3D);
         turn = false;
         animation = false;
         angle = 0;
@@ -184,12 +184,7 @@ public class GUI extends PApplet {
         }*/
 
 
-        //elllipse to write curved lines
-        float center = (width/2) + (9*(width/40));
-        float hp = (9*(width/40));
-        stroke(0);
-        point(center,height/2);
-        ellipse(center,height/2,(9*(width/20)),80);
+
 
         fill(0);
         //test.readText(true, this);
@@ -199,7 +194,7 @@ public class GUI extends PApplet {
         //code to print onto pages
         //left page
         int i =0;
-
+        textSize(17);
         for( String x : Pages.get(pn).lines)
         {
             //println(x);
@@ -233,7 +228,7 @@ public class GUI extends PApplet {
             angle = 0;
             animation = true;
             if(pn-2 >0)
-            pn-=2;
+                pn-=2;
             //animation();
             //stop();
         }
