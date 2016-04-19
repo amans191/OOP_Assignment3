@@ -50,18 +50,15 @@ public class GUI extends PApplet {
         fill(0);
         int noc;
         noc = 10;
-        int[] colour = new int[noc];
+        int[] colour = new int[noc]; // array for colors
+
+        //colors used in the book
         colour[0] = color(219,150,98);
         colour[1] = color(232,195,136);
         colour[2] = color(252,214,117);
 
-        float s = height/20;
-        float w = width/2;
-        //float h = height - s;
-        //line(w,s,w,height - s);
-        //curve(w,height, w,h, width-(width/20), h-5, width,height);
-
-        //for animation
+        //float s = height/20;
+        //float w = width/2;
 
         //System.out.println(camera.returnX());
 /*
@@ -240,19 +237,7 @@ public class GUI extends PApplet {
 
     }
 
-    boolean animation;
-    boolean animationright;
+   private boolean animation;
+   private boolean animationright;
 
-
-    public void animation()
-    {
-
-          for(int i =0; i <8000; ++i)
-          {
-
-
-          }
-        animation = false;
-
-    }
 }
