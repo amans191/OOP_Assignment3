@@ -1,10 +1,12 @@
 package ie.dit;
 
+//camera libraries
 import com.github.sarxos.webcam.*;
 
 import javax.swing.*;
 import java.awt.*;
 
+//Camera class
 public class Camera implements WebcamMotionListener{
 
     Webcam webcam;

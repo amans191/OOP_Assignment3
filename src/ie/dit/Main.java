@@ -6,7 +6,7 @@ import com.github.sarxos.webcam.Webcam;
 //processing library
 import processing.core.PApplet;
 
-//libraries
+//camera libraries
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;

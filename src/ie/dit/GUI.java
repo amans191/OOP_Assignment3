@@ -1,7 +1,9 @@
 package ie.dit;
 
+//processing library
 import processing.core.*;
 import java.awt.*;
+
 import java.util.ArrayList;
 
 public class GUI extends PApplet {
@@ -35,10 +37,12 @@ public class GUI extends PApplet {
     public boolean turn;
     
 
+
     public void draw(){
        if(turn) {
            //animation();
        }
+        //drawing book
            background(0);
         stroke(255);
         fill(0);
@@ -72,6 +76,7 @@ public class GUI extends PApplet {
             }
         }
 
+        //page turning animation
         if(animation)
         {
             angle+=0.1;

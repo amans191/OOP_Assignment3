@@ -1,11 +1,15 @@
 package ie.dit;
 
+//voice library
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 
 /**
  * Created by Eoin on 13/04/2016.
  */
+
+//speech class
+//this class
 public class Speech {
     private static String VOICENAME_kevin = "kevin";
     private String text;
