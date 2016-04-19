@@ -4,6 +4,7 @@ import processing.core.*;
 //import processing.video.*;
 import java.awt.*;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 /**
  * Created by Eoin on 07/03/2016.
@@ -15,13 +16,18 @@ public class GUI extends PApplet {
     Point p;
     int x;
 
+    ArrayList<Page> Pages;
     public GUI(Text test, Camera camera){
+        Pages = new ArrayList<>();
         this.test = test;
         this.camera = camera;
         this.p = camera.p;
         this.x = 0;
+        Pages = test.Pages;
+        pn =0;
     }
 
+    int pn ;
     public void settings() {
         size(1200, 700 , P3D);
         turn = false;
@@ -186,7 +192,25 @@ public class GUI extends PApplet {
         ellipse(center,height/2,(9*(width/20)),80);
 
         fill(0);
-        test.readText(true, this);
+        //test.readText(true, this);
+
+
+
+        //code to print onto pages
+        //left page
+        int i =0;
+        for( String x : Pages.get(pn).lines)
+        {
+            //println(x);
+            text(x,(width/20)+40,(height/20)+40+(i*15));
+            i++;
+        }
+
+        //right page
+        for(String x :Pages.get(pn).lines)
+        {
+            text(x,(width/2)+40,(height/20)+40+(i*15));
+        }
 
     }
 
