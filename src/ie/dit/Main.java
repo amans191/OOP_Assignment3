@@ -102,9 +102,6 @@ public class Main extends JFrame{
         gui.setSize(300, 300);
         gui.setVisible(true);
         gui.setTitle("Book Reader");
-
-        //camera.detectMotion();
-        //camera.webcamPanel();
     }
 
     public void choosefile()
