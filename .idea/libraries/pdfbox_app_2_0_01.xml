@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="pdfbox-app-2.0.01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../download/pdfbox-app-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../download/freetts-1.2.2-bin.zip!/freetts-1.2/javadoc" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
