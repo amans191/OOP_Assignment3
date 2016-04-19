@@ -51,8 +51,8 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="235" column="9" selection-start-line="235" selection-start-column="9" selection-end-line="235" selection-end-column="9" />
+            <state relative-caret-position="213">
+              <caret line="220" column="12" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -829,7 +829,7 @@
       <workItem from="1460995164152" duration="22000" />
       <workItem from="1460996335486" duration="185000" />
       <workItem from="1460996579909" duration="7914000" />
-      <workItem from="1461008939313" duration="7301000" />
+      <workItem from="1461008939313" duration="7339000" />
     </task>
     <task id="LOCAL-00001" summary="book first try&#10;">
       <created>1458660622588</created>
@@ -992,11 +992,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461071555791</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="pages turn">
+      <created>1461071665234</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1461071665234</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72062000" />
+    <option name="totallyTimeSpent" value="72100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1465,8 +1472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="235" column="9" selection-start-line="235" selection-start-column="9" selection-end-line="235" selection-end-column="9" />
+        <state relative-caret-position="213">
+          <caret line="220" column="12" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

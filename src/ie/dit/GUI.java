@@ -216,17 +216,18 @@ public class GUI extends PApplet {
         {
             angle = 0;
             animation = true;
-            if(pn-2 >0)
+            if(pn-2 >0){
                 pn-=2;
-            //animation();
-            //stop();
+            }
         }
         else if (key == 'n')
         {
             angle = 8;
             animationright = true;
-            if(pn+2 <= Pages.size())
-            pn+=2;
+            if(pn+2 <= Pages.size()) {
+                pn += 2;
+
+            }
         }
         else if (key == 's')
         {
