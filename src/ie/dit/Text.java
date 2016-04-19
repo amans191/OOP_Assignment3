@@ -144,7 +144,7 @@ public class Text  extends PApplet {
         //Pages = new ArrayList<>();
         int j=0;
         int i =0;
-        Page page = new Page(j);
+        Page page = new Page(j+1);
         for( String sentence : Text.split("\n"))
         {
            page.lines.add(sentence);
@@ -155,12 +155,22 @@ public class Text  extends PApplet {
             {
                 Pages.add(page);
                 j++;
+                page = new Page(j+1);
 
                 //println("p end ...............");
                 //i = 0;
             }
         }
 
+    }
+
+    public void read()
+    {
+        int i =0;
+        for( String pi : Pages.get(i).lines)
+        {
+            println(pi);
+        }
     }
 
     public boolean checkfornumber( String sentence, int j)
@@ -171,7 +181,7 @@ public class Text  extends PApplet {
             {
 
                 //println(word);
-                println("j is" + j);
+                //println("j is" + j);
                 return true;
             }
         }

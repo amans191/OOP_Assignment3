@@ -99,6 +99,7 @@ public class Main extends JFrame{
     {
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load, camera));
+        //load.read();
 
     }
 }

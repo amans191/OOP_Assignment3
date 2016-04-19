@@ -19,5 +19,6 @@
     <orderEntry type="library" name="poi-3.14-20160307" level="application" />
     <orderEntry type="library" name="poi-3" level="application" />
     <orderEntry type="library" name="webcam-capture-0.3.10" level="application" />
+    <orderEntry type="library" name="webcam-capture-0.3.101" level="project" />
   </component>
 </module>

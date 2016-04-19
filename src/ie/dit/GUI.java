@@ -4,6 +4,7 @@ import processing.core.*;
 //import processing.video.*;
 import java.awt.*;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 /**
  * Created by Eoin on 07/03/2016.
@@ -15,21 +16,26 @@ public class GUI extends PApplet {
     Point p;
     int x;
 
+    ArrayList<Page> Pages;
     public GUI(Text test, Camera camera){
+        Pages = new ArrayList<>();
         this.test = test;
         this.camera = camera;
         this.p = camera.p;
         this.x = 0;
+        Pages = test.Pages;
+        pn =0;
     }
 
+    int pn ;
     public void settings() {
-        size(1200, 700 , P3D);
+        size(1400, 600 , P3D);
         turn = false;
         animation = false;
         angle = 0;
 
         camera.detectMotion();
-        camera.webcamPanel();
+       camera.webcamPanel();
     }
 
     public float angle ;
@@ -61,7 +67,7 @@ public class GUI extends PApplet {
         //for animation
 
         //System.out.println(camera.returnX());
-
+/*
         if (camera.returnX() <= 40 && camera.returnX()>= 0)
         {
            // System.out.println(p.getX());
@@ -73,7 +79,7 @@ public class GUI extends PApplet {
             angle = 0;
             animation = true;
         }
-
+*/
         if(animation)
         {
             angle+=0.1;
@@ -178,15 +184,32 @@ public class GUI extends PApplet {
         }*/
 
 
-        //elllipse to write curved lines
-        float center = (width/2) + (9*(width/40));
-        float hp = (9*(width/40));
-        stroke(0);
-        point(center,height/2);
-        ellipse(center,height/2,(9*(width/20)),80);
+
 
         fill(0);
-        test.readText(true, this);
+        //test.readText(true, this);
+
+
+
+        //code to print onto pages
+        //left page
+        int i =0;
+        textSize(17);
+        for( String x : Pages.get(pn).lines)
+        {
+            //println(x);
+            text(x,(width/20)+40,(height/20)+40+(i*15));
+            i++;
+        }
+
+        //right page
+        i=0;
+        for(String x :Pages.get(pn+1).lines)
+        {
+            text(x,(width/2)+40,(height/20)+40+(i*15));
+            i++;
+        }
+
 
     }
 
@@ -204,6 +227,8 @@ public class GUI extends PApplet {
         {
             angle = 0;
             animation = true;
+            if(pn-2 >0)
+                pn-=2;
             //animation();
             //stop();
         }
@@ -211,6 +236,8 @@ public class GUI extends PApplet {
         {
             angle = 8;
             animationright = true;
+            if(pn+2 <= Pages.size())
+            pn+=2;
         }
         else if (key == 's')
         {
