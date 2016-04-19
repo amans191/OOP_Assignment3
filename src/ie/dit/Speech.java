@@ -9,7 +9,7 @@ import com.sun.speech.freetts.VoiceManager;
  */
 
 //speech class
-//this class
+//this class reads out the text
 public class Speech {
     private static String VOICENAME_kevin = "kevin";
     private String text;
