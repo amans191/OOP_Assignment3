@@ -80,15 +80,14 @@ public class GUI extends PApplet {
         if(animation)
         {
             angle+=0.1;
-           // println(angle);
         }
-        else if(animationright) {
+        else if(animationright)
+        {
                  angle-=0.1;
-                }
+        }
         if( (angle > 8) && (animation==true))
         {
             animation = false;
-            //animation = false;
         }
         else if( (angle<0.1 && (animationright == true)) )
         {
@@ -102,14 +101,10 @@ public class GUI extends PApplet {
         line(0, height / 20 ,0, height - (height / 20) );
         stroke(255);
         fill(colour[2]);
-        //arc(3*(width/4),height, 2*sqrt(((81*height*height) + (25 *width *width))/400), 2*sqrt(((81*height*height) + (25 *width *width))/400), -PI,0);
-        //curve(width/4,height/4, width/2,height/20, width-(width/20),height/20, width+(width/4),height/4);
         drawarc(0 ,h, width/2 - (width / 20) , h, 200);
         drawarc(0 ,height -h, width/2 - (width / 20) , height-h, 200);
         rect(0, h, (width) - ((width / 2) + (width / 20)), height - (2 * (h)));
         line(width/2 - (width / 20) ,h, width/2 - (width / 20), height - (height / 20));
-        //drawarc(width/2 , height-h , width - (width / 20), height - (h) , 200);
-        //curve(width/4,height +(height/4), width/2,height-(height/20), width-(width/20),height-(height/20), width+(width/4),height+(height/4) );
         endShape();
         popMatrix();
 
