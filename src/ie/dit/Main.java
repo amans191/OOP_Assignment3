@@ -6,7 +6,6 @@ import processing.core.PApplet;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Main extends JFrame{
 

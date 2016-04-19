@@ -1,14 +1,9 @@
 package ie.dit;
 
 import processing.core.*;
-//import processing.video.*;
 import java.awt.*;
-import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-/**
- * Created by Eoin on 07/03/2016.
- */
 public class GUI extends PApplet {
 
     Text test;
@@ -34,8 +29,6 @@ public class GUI extends PApplet {
         animation = false;
         angle = 0;
 
-        //camera.detectMotion();
-        //camera.webcamPanel();
     }
 
     public float angle ;
@@ -43,8 +36,6 @@ public class GUI extends PApplet {
     
 
     public void draw(){
-
-        //println(animation);
        if(turn) {
            //animation();
        }
@@ -65,17 +56,19 @@ public class GUI extends PApplet {
         //curve(w,height, w,h, width-(width/20), h-5, width,height);
 
         //for animation
-
-        //System.out.println(camera.returnX());
+        
 
         if (camera.cameraOn) {
             if (camera.returnX() <= 40 && camera.returnX() >= 0) {
-                // System.out.println(p.getX());
                 angle = 8;
                 animationright = true;
+                if(pn+2 <= Pages.size())
+                    pn+=2;
             } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
                 angle = 0;
                 animation = true;
+                if(pn-2 >0)
+                    pn-=2;
             }
         }
 
@@ -90,7 +83,6 @@ public class GUI extends PApplet {
         if( (angle > 8) && (animation==true))
         {
             animation = false;
-            //animation = false;
         }
         else if( (angle<0.1 && (animationright == true)) )
         {
