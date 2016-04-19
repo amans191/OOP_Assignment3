@@ -38,8 +38,8 @@ public class GUI extends PApplet {
        camera.webcamPanel();
     }
 
-    public float angle ;
-    public boolean turn;
+    private float angle ;
+    private boolean turn;
     
 
     public void draw(){
@@ -82,11 +82,11 @@ public class GUI extends PApplet {
         {
                  angle-=0.1;
         }
-        if( (angle > 8) && (animation==true))
+        if( (angle > 8) && (animation))
         {
             animation = false;
         }
-        else if( (angle<0.1 && (animationright == true)) )
+        else if( (angle<0.1 && (animationright)) )
         {
             animationright=false;
         }
@@ -110,8 +110,6 @@ public class GUI extends PApplet {
         int j= 0;
         for(int i = 0; i<20; i+=2,j++)
         {
-            int c = (int) random(0,3);
-            //float h = height/20;
 
             if(i == 0) {
                 //fill(222, 151, 36);
