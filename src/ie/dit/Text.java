@@ -181,7 +181,7 @@ public class Text  extends PApplet {
         }
     }
 
-    //
+    //check page number so it goes to a new page every number on the book
     public boolean checkfornumber( String sentence, int j)
     {
         for (String word: sentence.split(" "))
