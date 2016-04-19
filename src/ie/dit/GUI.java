@@ -44,11 +44,8 @@ public class GUI extends PApplet {
 
     public void draw(){
 
-        //println(animation);
-       if(turn) {
-           //animation();
-       }
-           background(0);
+
+        background(0);
         stroke(255);
         fill(0);
         int noc;
