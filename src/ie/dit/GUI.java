@@ -1,9 +1,14 @@
 package ie.dit;
 
 import processing.core.*;
+//import processing.video.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
+/**
+ * Created by Eoin on 07/03/2016.
+ */
 public class GUI extends PApplet {
 
     Text test;
@@ -29,62 +34,59 @@ public class GUI extends PApplet {
         animation = false;
         angle = 0;
 
+        camera.detectMotion();
+       camera.webcamPanel();
     }
 
-    public float angle ;
-    public boolean turn;
+    private float angle ;
+    private boolean turn;
     
 
     public void draw(){
-       if(turn) {
-           //animation();
-       }
-           background(0);
+
+
+        background(0);
         stroke(255);
         fill(0);
         int noc;
         noc = 10;
-        int[] colour = new int[noc];
+        int[] colour = new int[noc]; // array for colors
+
+        //colors used in the book
         colour[0] = color(219,150,98);
         colour[1] = color(232,195,136);
         colour[2] = color(252,214,117);
 
-        float s = height/20;
-        float w = width/2;
-        //float h = height - s;
-        //line(w,s,w,height - s);
-        //curve(w,height, w,h, width-(width/20), h-5, width,height);
+        //float s = height/20;
+        //float w = width/2;
 
-        //for animation
-        
-
-        if (camera.cameraOn) {
-            if (camera.returnX() <= 40 && camera.returnX() >= 0) {
-                angle = 8;
-                animationright = true;
-                if(pn+2 <= Pages.size())
-                    pn+=2;
-            } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
-                angle = 0;
-                animation = true;
-                if(pn-2 >0)
-                    pn-=2;
-            }
+        //System.out.println(camera.returnX());
+/*
+        if (camera.returnX() <= 40 && camera.returnX()>= 0)
+        {
+           // System.out.println(p.getX());
+            angle = 8;
+            animationright = true;
         }
-
+        else if (camera.returnX() <= 170 && camera.returnX() >= 130)
+        {
+            angle = 0;
+            animation = true;
+        }
+*/
         if(animation)
         {
             angle+=0.1;
-           // println(angle);
         }
-        else if(animationright) {
+        else if(animationright)
+        {
                  angle-=0.1;
-                }
-        if( (angle > 8) && (animation==true))
+        }
+        if( (angle > 8) && (animation))
         {
             animation = false;
         }
-        else if( (angle<0.1 && (animationright == true)) )
+        else if( (angle<0.1 && (animationright)) )
         {
             animationright=false;
         }
@@ -96,14 +98,10 @@ public class GUI extends PApplet {
         line(0, height / 20 ,0, height - (height / 20) );
         stroke(255);
         fill(colour[2]);
-        //arc(3*(width/4),height, 2*sqrt(((81*height*height) + (25 *width *width))/400), 2*sqrt(((81*height*height) + (25 *width *width))/400), -PI,0);
-        //curve(width/4,height/4, width/2,height/20, width-(width/20),height/20, width+(width/4),height/4);
         drawarc(0 ,h, width/2 - (width / 20) , h, 200);
         drawarc(0 ,height -h, width/2 - (width / 20) , height-h, 200);
         rect(0, h, (width) - ((width / 2) + (width / 20)), height - (2 * (h)));
         line(width/2 - (width / 20) ,h, width/2 - (width / 20), height - (height / 20));
-        //drawarc(width/2 , height-h , width - (width / 20), height - (h) , 200);
-        //curve(width/4,height +(height/4), width/2,height-(height/20), width-(width/20),height-(height/20), width+(width/4),height+(height/4) );
         endShape();
         popMatrix();
 
@@ -112,8 +110,6 @@ public class GUI extends PApplet {
         int j= 0;
         for(int i = 0; i<20; i+=2,j++)
         {
-            int c = (int) random(0,3);
-            //float h = height/20;
 
             if(i == 0) {
                 //fill(222, 151, 36);
@@ -218,17 +214,18 @@ public class GUI extends PApplet {
         {
             angle = 0;
             animation = true;
-            if(pn-2 >0)
+            if(pn-2 >0){
                 pn-=2;
-            //animation();
-            //stop();
+            }
         }
         else if (key == 'n')
         {
             angle = 8;
             animationright = true;
-            if(pn+2 <= Pages.size())
-            pn+=2;
+            if(pn+2 <= Pages.size()) {
+                pn += 2;
+
+            }
         }
         else if (key == 's')
         {
@@ -239,19 +236,7 @@ public class GUI extends PApplet {
 
     }
 
-    boolean animation;
-    boolean animationright;
+   private boolean animation;
+   private boolean animationright;
 
-
-    public void animation()
-    {
-
-          for(int i =0; i <8000; ++i)
-          {
-
-
-          }
-        animation = false;
-
-    }
 }

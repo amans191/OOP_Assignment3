@@ -5,10 +5,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//text libraries
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+
+//processing library
 import processing.core.PApplet;
 
 
@@ -22,6 +25,7 @@ public class Text  extends PApplet {
         loadFile(fileName);
     }
 
+    //opens up an explorer and allows you too chose a file
     public void loadFile(String fileName)
     {
         if (fileName.equals(""))
@@ -42,6 +46,7 @@ public class Text  extends PApplet {
         }
     }
 
+    //too load PDF files
     public void loadPDFFile(File selection)
     {
         try {
@@ -57,6 +62,7 @@ public class Text  extends PApplet {
         }
     }
 
+    //too laod DOCX files
     public void loadDocxFile(File selection)
     {
         System.out.println(selection);
@@ -107,6 +113,7 @@ public class Text  extends PApplet {
         }
     }
 
+    //read text
     public void readText(boolean words, GUI gui)
     {
         int i = 10;
@@ -164,6 +171,7 @@ public class Text  extends PApplet {
 
     }
 
+    //read lines
     public void read()
     {
         int i =0;
@@ -173,6 +181,7 @@ public class Text  extends PApplet {
         }
     }
 
+    //check page number so it goes to a new page every number on the book
     public boolean checkfornumber( String sentence, int j)
     {
         for (String word: sentence.split(" "))

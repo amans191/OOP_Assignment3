@@ -1,19 +1,26 @@
 package ie.dit;
 
+//webcam library
 import com.github.sarxos.webcam.Webcam;
+
+//processing library
 import processing.core.PApplet;
 
+//camera libraries
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
 public class Main extends JFrame{
 
+    //main menu code
     JButton finish, choose, settings, openCamera;
     JLabel title, filechoosen;
 
+    //text class
     Text load;
 
+    //camera class
     Webcam webcam = null;
 
     Camera camera = new Camera(webcam);
@@ -23,6 +30,7 @@ public class Main extends JFrame{
         setLayout(new GridBagLayout());
         GridBagConstraints l = new GridBagConstraints();
 
+        //buttons
         title = new JLabel("BOOK READER");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 2;
