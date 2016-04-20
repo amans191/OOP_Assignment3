@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16e940bd-641f-4a8b-bc72-f8d283f94be3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/Main.class" afterPath="$PROJECT_DIR$/out/production/Assignment3/ie/dit/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/Camera.java" afterPath="$PROJECT_DIR$/src/ie/dit/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/GUI.java" afterPath="$PROJECT_DIR$/src/ie/dit/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/Main.java" afterPath="$PROJECT_DIR$/src/ie/dit/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/Page.java" afterPath="$PROJECT_DIR$/src/ie/dit/Page.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/Speech.java" afterPath="$PROJECT_DIR$/src/ie/dit/Speech.java" />
     </list>
     <ignored path="Assignment3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -750,7 +746,7 @@
       <workItem from="1461097001824" duration="2266000" />
       <workItem from="1461102020340" duration="621000" />
       <workItem from="1461138369616" duration="4450000" />
-      <workItem from="1461144230877" duration="4120000" />
+      <workItem from="1461144230877" duration="4217000" />
     </task>
     <task id="LOCAL-00001" summary="book first try&#10;">
       <created>1458660622588</created>
@@ -896,15 +892,21 @@
       <option name="project" value="LOCAL" />
       <updated>1461148565681</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Minor edits, added instructions to menu.">
+      <created>1461149905764</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1461149905764</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93379000" />
+    <option name="totallyTimeSpent" value="93476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -991,7 +993,8 @@
     <MESSAGE value="Fixed bug causing program to crash on opening camera." />
     <MESSAGE value="Fixed a few small bugs, cleaned up the Menu a little and made it so that the book now loops upon hitting the last page, or vice versa." />
     <MESSAGE value="The program now speaks the text on the current page, rather than from the start of the file." />
-    <option name="LAST_COMMIT_MESSAGE" value="The program now speaks the text on the current page, rather than from the start of the file." />
+    <MESSAGE value="Minor edits, added instructions to menu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor edits, added instructions to menu." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
