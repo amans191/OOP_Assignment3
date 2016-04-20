@@ -14,16 +14,16 @@ import java.awt.*;
 public class Main extends JFrame{
 
     //main menu code
-    JButton finish, choose, openCamera;
-    JLabel title, fileChosen, instructionsM, instructionsN, instructionsS;
+    private JButton finish, choose, openCamera;
+    private JLabel title, fileChosen, instructionsM, instructionsN, instructionsS;
 
     //text class
-    Text load;
+    private Text load;
 
     //camera class
-    Webcam webcam = null;
+    private Webcam webcam = null;
 
-    Camera camera = new Camera(webcam);
+    private Camera camera = new Camera(webcam);
 
     public Main()
     {
@@ -87,7 +87,7 @@ public class Main extends JFrame{
 
     }
 
-    public class event implements ActionListener{
+    private class event implements ActionListener{
 
         public void actionPerformed(ActionEvent e){
             choosefile();
@@ -95,13 +95,13 @@ public class Main extends JFrame{
 
     }
 
-    public class event2 implements  ActionListener{
+    private class event2 implements  ActionListener{
         public void actionPerformed(ActionEvent fin) {
             pros();
         }
     }
 
-    public class event3 implements ActionListener{
+    private class event3 implements ActionListener{
         public void actionPerformed(ActionEvent cameraEvent) {
             camera();
         }
@@ -116,7 +116,7 @@ public class Main extends JFrame{
         gui.setTitle("Book Reader");
     }
 
-    public void choosefile()
+    private void choosefile()
     {
         load = new Text("");
         fileChosen.setText("Book Chosen");
@@ -127,14 +127,14 @@ public class Main extends JFrame{
     }
 
 
-    public void pros()
+    private void pros()
     {
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load, camera));
 
     }
 
-    public void camera()
+    private void camera()
     {
         if (camera.cameraOn)
         {

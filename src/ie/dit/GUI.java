@@ -25,7 +25,7 @@ public class GUI extends PApplet {
         pn =0;
     }
 
-    int pn ;
+    private int pn ;
     public void settings() {
         size(1400, 600 , P3D);
         animation = false;
@@ -75,7 +75,7 @@ public class GUI extends PApplet {
             if (camera.returnX() <= 40 && camera.returnX() >= 0) {
                 x = 0;
                 angle = 8;
-                animationright = true;
+                animationright();
                 //TimeUnit.SECONDS.sleep(1);
 
             } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
@@ -183,28 +183,12 @@ public class GUI extends PApplet {
             endShape();
         }
 
-        //draw left side
-       /* for(int i = 0; i<20; i+=2)
-        {
-            float h = height/20;
-            beginShape();
-            line(width / 2, height / 20 , width / 2, height - (height / 20) - i);
-            stroke(255);
-            //arc(3*(width/4),height, 2*sqrt(((81*height*height) + (25 *width *width))/400), 2*sqrt(((81*height*height) + (25 *width *width))/400), -PI,0);
-            //curve(width/4,height/4, width/2,height/20, width-(width/20),height/20, width+(width/4),height/4);
-            drawarc(width/2 ,h,  (width / 20) , h, 200);
-            drawarc(width/2 , height -(height / 20)+i ,(width / 20)-i, (height - (h))+i , 200-(i*12));
-            line((width / 20) -i,h+i, (width / 20)-i, height - (height / 20) +i);
-            //curve(width/4,height +(height/4), width/2,height-(height/20), width-(width/20),height-(height/20), width+(width/4),height+(height/4) );
-
-            endShape();
-        }*/
 
 
 
 
         fill(0);
-        //text.readText(true, this);
+        //text.readText(true, this); backup textoutput
 
 
 
@@ -230,6 +214,7 @@ public class GUI extends PApplet {
 
     }
 
+    //function to draw moving page
     private void drawarc(float x1, float y1, float x2, float y2, float h)
     {
         float l = (x2-x1)/2;
