@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16e940bd-641f-4a8b-bc72-f8d283f94be3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/Text.java" afterPath="$PROJECT_DIR$/src/ie/dit/Text.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ie/dit/GUI.java" afterPath="$PROJECT_DIR$/src/ie/dit/GUI.java" />
     </list>
     <ignored path="Assignment3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +41,7 @@
       <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/dit/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="-429">
               <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1967">
-              <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+            <state relative-caret-position="83">
+              <caret line="233" column="12" selection-start-line="233" selection-start-column="12" selection-end-line="233" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Text.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Text.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/dit/Text.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
@@ -105,9 +105,9 @@
         <option value="$PROJECT_DIR$/src/ie/dit/root.java" />
         <option value="$PROJECT_DIR$/src/ie/dit/root.form" />
         <option value="$PROJECT_DIR$/src/ie/dit/Camera.java" />
-        <option value="$PROJECT_DIR$/src/ie/dit/GUI.java" />
         <option value="$PROJECT_DIR$/src/ie/dit/Main.java" />
         <option value="$PROJECT_DIR$/src/ie/dit/Text.java" />
+        <option value="$PROJECT_DIR$/src/ie/dit/GUI.java" />
       </list>
     </option>
   </component>
@@ -850,7 +850,7 @@
       <workItem from="1461091607386" duration="242000" />
       <workItem from="1461145796075" duration="527000" />
       <workItem from="1461147689744" duration="694000" />
-      <workItem from="1461152148050" duration="6238000" />
+      <workItem from="1461152148050" duration="6642000" />
     </task>
     <task id="LOCAL-00001" summary="book first try&#10;">
       <created>1458660622588</created>
@@ -1083,11 +1083,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461157786162</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="&#10;c">
+      <created>1461160318312</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1461160318312</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80977000" />
+    <option name="totallyTimeSpent" value="81381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1148,10 +1155,10 @@
     <MESSAGE value="pages turn" />
     <MESSAGE value="&#10;&#10;hb" />
     <MESSAGE value="c" />
+    <MESSAGE value="cam turn" />
     <MESSAGE value="&#10;" />
     <MESSAGE value="&#10;c" />
-    <MESSAGE value="cam turn" />
-    <option name="LAST_COMMIT_MESSAGE" value="cam turn" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;c" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1553,9 +1560,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ie/dit/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="247" column="36" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/dit/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="-429">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1565,18 +1582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/dit/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1967">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ie/dit/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="247" column="36" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
+        <state relative-caret-position="83">
+          <caret line="233" column="12" selection-start-line="233" selection-start-column="12" selection-end-line="233" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

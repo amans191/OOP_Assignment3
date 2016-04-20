@@ -231,9 +231,7 @@ public class GUI extends PApplet {
         {
             angle = 0;
             animation = true;
-            if(pn-2 >0){
-                pn-=2;
-            }
+
 
             if (pn <= 2){
                 pageLoop = true;
@@ -245,10 +243,7 @@ public class GUI extends PApplet {
         {
             angle = 8;
             animationright = true;
-            if(pn+2 <= Pages.size()) {
-                pn += 2;
 
-            }
             x = 0;
         }
 
