@@ -1,46 +1,38 @@
 package ie.dit;
 
 import processing.core.*;
-//import processing.video.*;
 import java.awt.*;
-import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-/**
- * Created by Eoin on 07/03/2016.
- */
 public class GUI extends PApplet {
 
-    Text test;
+    Text text;
     Camera camera;
     Point p;
     int x;
+    Boolean pageLoop;
 
     ArrayList<Page> Pages;
-    public GUI(Text test, Camera camera){
+    public GUI(Text text, Camera camera){
         Pages = new ArrayList<>();
-        this.test = test;
+        this.text = text;
         this.camera = camera;
         this.p = camera.p;
         this.x = 0;
-        Pages = test.Pages;
+        Pages = text.Pages;
+        this.pageLoop = false;
         pn =0;
     }
 
     int pn ;
     public void settings() {
         size(1400, 600 , P3D);
-        turn = false;
         animation = false;
         angle = 0;
 
-        camera.detectMotion();
-       camera.webcamPanel();
     }
 
     private float angle ;
-    private boolean turn;
-    
 
     public void draw(){
 
@@ -57,23 +49,43 @@ public class GUI extends PApplet {
         colour[1] = color(232,195,136);
         colour[2] = color(252,214,117);
 
+        System.out.println(pn);
+
         //float s = height/20;
         //float w = width/2;
 
-        //System.out.println(camera.returnX());
-/*
-        if (camera.returnX() <= 40 && camera.returnX()>= 0)
-        {
-           // System.out.println(p.getX());
-            angle = 8;
-            animationright = true;
+        //for animation
+
+
+        if (camera.cameraOn) {
+            if (camera.returnX() <= 40 && camera.returnX() >= 0) {
+                x = 0;
+                angle = 8;
+                animationright = true;
+                if(pn+2 <= Pages.size()) {
+                    pn += 2;
+                }
+            } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
+                x = 0;
+                angle = 0;
+                animation = true;
+                if(pn-2 >0) {
+                    pn -= 2;
+                }
+                if (pn <= 2){
+                    pageLoop = true;
+                }
+            }
         }
-        else if (camera.returnX() <= 170 && camera.returnX() >= 130)
-        {
-            angle = 0;
-            animation = true;
+
+        if (pn == Pages.size()){
+            pn = 0;
         }
-*/
+        if (pn <= 2 && pageLoop){
+            pn = Pages.size() - 2;
+            pageLoop = false;
+        }
+
         if(animation)
         {
             angle+=0.1;
@@ -85,6 +97,7 @@ public class GUI extends PApplet {
         if( (angle > 8) && (animation))
         {
             animation = false;
+            //animation = false;
         }
         else if( (angle<0.1 && (animationright)) )
         {
@@ -174,7 +187,7 @@ public class GUI extends PApplet {
 
 
         fill(0);
-        //test.readText(true, this);
+        //text.readText(true, this);
 
 
 
@@ -210,15 +223,20 @@ public class GUI extends PApplet {
     @Override
     public void keyPressed() {
         super.keyPressed();
-        if(key == 'm')
+        if(key == 'n' || key == 'N')
         {
             angle = 0;
             animation = true;
             if(pn-2 >0){
                 pn-=2;
             }
+
+            if (pn <= 2){
+                pageLoop = true;
+            }
+            x = 0;
         }
-        else if (key == 'n')
+        else if (key == 'm' || key == 'M')
         {
             angle = 8;
             animationright = true;
@@ -226,10 +244,11 @@ public class GUI extends PApplet {
                 pn += 2;
 
             }
+            x = 0;
         }
-        else if (key == 's')
+        else if (key == 's' || key == 'S')
         {
-            Speech speechFromFile = new Speech(test.lines.get(x));
+            Speech speechFromFile = new Speech(Pages.get(pn).lines.get(x));
             speechFromFile.say();
             x++;
         }

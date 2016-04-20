@@ -14,8 +14,8 @@ import java.awt.*;
 public class Main extends JFrame{
 
     //main menu code
-    JButton finish, choose, settings, openCamera;
-    JLabel title, filechoosen;
+    JButton finish, choose, openCamera;
+    JLabel title, fileChosen, instructionsM, instructionsN, instructionsS;
 
     //text class
     Text load;
@@ -32,46 +32,58 @@ public class Main extends JFrame{
 
         //buttons
         title = new JLabel("BOOK READER");
-        l.fill = GridBagConstraints.HORIZONTAL;
+        l.fill = GridBagConstraints.CENTER;
         l.gridx = 2;
         l.gridy = 0;
         add(title,l);
 
-        choose = new JButton("choose file");
+        fileChosen = new JLabel("Choose file");
+        l.fill = GridBagConstraints.CENTER;
+        l.gridx = 2;
+        l.gridy = 1;
+        add(fileChosen,l);
+
+        instructionsM = new JLabel("[M] - Turn page right");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 4;
+        add(instructionsM,l);
+
+        instructionsN = new JLabel("[N] - Turn page left");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 5;
+        add(instructionsN,l);
+
+        instructionsS = new JLabel("[S] - Speak Text");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 6;
+        add(instructionsS,l);
+
+        choose = new JButton("Choose File");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 1;
-        l.gridy = 1;
+        l.gridy = 2;
         add(choose,l);
         event e = new event();
         choose.addActionListener(e);
 
-        filechoosen = new JLabel("choose file");
-        l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 3;
-        l.gridy = 1;
-        add(filechoosen,l);
-
-        settings = new JButton("Settings");
-        l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 1;
-        l.gridy = 2;
-        add(settings,l);
-
-        finish = new JButton("READ");
-        l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 3;
-        l.gridy = 2;
-        add(finish,l);
-        event2 fin = new event2();
-        finish.addActionListener(fin);
-
         openCamera = new JButton("Camera");
         l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 2;
-        l.gridy = 3;
+        l.gridx = 3;
+        l.gridy = 2;
         add(openCamera, l);
         event3 cameraEvent = new event3();
         openCamera.addActionListener(cameraEvent);
+
+        finish = new JButton("READ");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 3;
+        add(finish,l);
+        event2 fin = new event2();
+        finish.addActionListener(fin);
 
     }
 
@@ -102,14 +114,12 @@ public class Main extends JFrame{
         gui.setSize(300, 300);
         gui.setVisible(true);
         gui.setTitle("Book Reader");
-
-        //camera.detectMotion();
-        //camera.webcamPanel();
     }
 
     public void choosefile()
     {
         load = new Text("");
+        fileChosen.setText("Book Chosen");
 
         //book = new ArrayList<>();
         //book = load.lines;
@@ -121,7 +131,6 @@ public class Main extends JFrame{
     {
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load, camera));
-        //load.read();
 
     }
 

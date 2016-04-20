@@ -13,12 +13,14 @@ public class Camera implements WebcamMotionListener{
     WebcamMotionDetector detector;
     JFrame window;
     Point p;
-    boolean cameraOn;
+    boolean cameraOn, motionDetected;
 
-    Camera(Webcam webcam){
+    Camera(Webcam w){
+        this.webcam  = w;
         this.webcam = Webcam.getDefault();
         this.p = null;
         this.cameraOn = false;
+        this.motionDetected = false;
     }
 
     public void webcamPanel(){
@@ -50,17 +52,27 @@ public class Camera implements WebcamMotionListener{
 
     public void stopMotionDetection(){
         window.dispose();
+        detector.removeMotionListener(this);
         detector.stop();
         cameraOn = false;
     }
 
     public double returnX() {
-        return p.getX();
+        if (motionDetected && p != null) {
+            return p.getX();
+        }
+        else{
+            return 0;
+        }
     }
 
     @Override
     public void motionDetected(WebcamMotionEvent wme) {
-        p = wme.getCog();
-        System.out.println(p.getX());
+        if (motionDetected) {
+            p = wme.getCog();
+        }
+        else{
+            motionDetected = true;
+        }
     }
 }
