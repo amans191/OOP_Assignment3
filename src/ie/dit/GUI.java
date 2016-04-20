@@ -3,6 +3,7 @@ package ie.dit;
 import processing.core.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class GUI extends PApplet {
 
@@ -62,16 +63,13 @@ public class GUI extends PApplet {
                 x = 0;
                 angle = 8;
                 animationright = true;
-                if(pn+2 <= Pages.size()) {
-                    pn += 2;
-                }
+                //TimeUnit.SECONDS.sleep(1);
+
             } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
                 x = 0;
                 angle = 0;
                 animation = true;
-                if(pn-2 >0) {
-                    pn -= 2;
-                }
+
                 if (pn <= 2){
                     pageLoop = true;
                 }
@@ -98,10 +96,17 @@ public class GUI extends PApplet {
         {
             animation = false;
             //animation = false;
+            if(pn-2 >0) {
+                //pn -= 2;
+            }
         }
         else if( (angle<0.1 && (animationright)) )
         {
             animationright=false;
+            if(pn+2 <= Pages.size()) {
+
+                // pn += 2;
+            }
         }
         float h = height/20;
         pushMatrix();
@@ -146,7 +151,6 @@ public class GUI extends PApplet {
             }
             else {
                 stroke(255);
-                //drawarc(width/2 ,h, width - (width / 20) , h, 200);
                 stroke(0);
                 fill(colour[j % 2]);
             }

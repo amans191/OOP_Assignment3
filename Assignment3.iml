@@ -20,5 +20,6 @@
     <orderEntry type="library" name="poi-3" level="project" />
     <orderEntry type="library" name="lib" level="application" />
     <orderEntry type="library" name="library" level="application" />
+    <orderEntry type="library" name="poi-scratchpad-3.14-20160307" level="project" />
   </component>
 </module>
