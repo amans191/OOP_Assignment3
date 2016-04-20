@@ -37,38 +37,33 @@ public class Main extends JFrame{
         l.gridy = 0;
         add(title,l);
 
-        choose = new JButton("choose file");
+        filechoosen = new JLabel("Choose file");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 1;
+        add(filechoosen,l);
+
+        choose = new JButton("Choose File");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 1;
-        l.gridy = 1;
+        l.gridy = 2;
         add(choose,l);
         event e = new event();
         choose.addActionListener(e);
 
-        filechoosen = new JLabel("choose file");
-        l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 3;
-        l.gridy = 1;
-        add(filechoosen,l);
-
-        settings = new JButton("Settings");
-        l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 1;
-        l.gridy = 2;
-        add(settings,l);
 
         finish = new JButton("READ");
         l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 3;
-        l.gridy = 2;
+        l.gridx = 2;
+        l.gridy = 3;
         add(finish,l);
         event2 fin = new event2();
         finish.addActionListener(fin);
 
         openCamera = new JButton("Camera");
         l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 2;
-        l.gridy = 3;
+        l.gridx = 3;
+        l.gridy = 2;
         add(openCamera, l);
         event3 cameraEvent = new event3();
         openCamera.addActionListener(cameraEvent);
@@ -107,6 +102,7 @@ public class Main extends JFrame{
     public void choosefile()
     {
         load = new Text("");
+        filechoosen.setText("Book Chosen");
 
         //book = new ArrayList<>();
         //book = load.lines;
@@ -118,7 +114,6 @@ public class Main extends JFrame{
     {
         String[] a = {"MAIN"};
         PApplet.runSketch(a, new GUI(load, camera));
-        //load.read();
 
     }
 

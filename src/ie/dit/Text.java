@@ -20,8 +20,11 @@ public class Text  extends PApplet {
     ArrayList<String> lines = new ArrayList<>();
     ArrayList<Page> Pages = new ArrayList<>();
 
-    public Text(String fileName)
+    String fileName;
+
+    public Text(String s)
     {
+        this.fileName = s;
         loadFile(fileName);
     }
 
@@ -62,7 +65,7 @@ public class Text  extends PApplet {
         }
     }
 
-    //too laod DOCX files
+    //to load DOCX files
     public void loadDocxFile(File selection)
     {
         System.out.println(selection);

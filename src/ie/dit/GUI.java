@@ -10,6 +10,7 @@ public class GUI extends PApplet {
     Camera camera;
     Point p;
     int x;
+    Boolean pageLoop;
 
     ArrayList<Page> Pages;
     public GUI(Text test, Camera camera){
@@ -19,6 +20,7 @@ public class GUI extends PApplet {
         this.p = camera.p;
         this.x = 0;
         Pages = test.Pages;
+        this.pageLoop = false;
         pn =0;
     }
 
@@ -50,6 +52,8 @@ public class GUI extends PApplet {
         colour[1] = color(232,195,136);
         colour[2] = color(252,214,117);
 
+        System.out.println(pn);
+
         //float s = height/20;
         //float w = width/2;
 
@@ -69,7 +73,18 @@ public class GUI extends PApplet {
                 if(pn-2 >0) {
                     pn -= 2;
                 }
+                if (pn <= 2){
+                    pageLoop = true;
+                }
             }
+        }
+
+        if (pn == Pages.size()){
+            pn = 0;
+        }
+        if (pn <= 2 && pageLoop){
+            pn = Pages.size() - 2;
+            pageLoop = false;
         }
 
         if(animation)
@@ -209,15 +224,19 @@ public class GUI extends PApplet {
     @Override
     public void keyPressed() {
         super.keyPressed();
-        if(key == 'm')
+        if(key == 'n')
         {
             angle = 0;
             animation = true;
             if(pn-2 >0){
                 pn-=2;
             }
+
+            if (pn <= 2){
+                pageLoop = true;
+            }
         }
-        else if (key == 'n')
+        else if (key == 'm')
         {
             angle = 8;
             animationright = true;

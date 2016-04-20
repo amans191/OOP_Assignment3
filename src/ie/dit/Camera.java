@@ -69,7 +69,6 @@ public class Camera implements WebcamMotionListener{
     public void motionDetected(WebcamMotionEvent wme) {
         if (motionDetected) {
             p = wme.getCog();
-            System.out.println(p.getX());
         }
         else{
             motionDetected = true;
