@@ -222,6 +222,7 @@ public class GUI extends PApplet {
     }
 
 
+    //changed keys to work with makey makey
     @Override
     public void keyPressed() {
         super.keyPressed();

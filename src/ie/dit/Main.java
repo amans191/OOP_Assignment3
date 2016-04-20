@@ -43,6 +43,7 @@ public class Main extends JFrame{
         l.gridy = 1;
         add(fileChosen,l);
 
+        //changed keys to work with the Makey Makey
         instructionsM = new JLabel("[W] - Turn page right");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 2;
