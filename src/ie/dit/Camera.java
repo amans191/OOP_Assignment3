@@ -15,7 +15,8 @@ public class Camera implements WebcamMotionListener{
     Point p;
     boolean cameraOn, motionDetected;
 
-    Camera(Webcam webcam){
+    Camera(Webcam w){
+        this.webcam  = w;
         this.webcam = Webcam.getDefault();
         this.p = null;
         this.cameraOn = false;

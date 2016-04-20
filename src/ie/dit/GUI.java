@@ -27,15 +27,12 @@ public class GUI extends PApplet {
     int pn ;
     public void settings() {
         size(1400, 600 , P3D);
-        turn = false;
         animation = false;
         angle = 0;
 
     }
 
     private float angle ;
-    private boolean turn;
-    
 
     public void draw(){
 
@@ -226,7 +223,7 @@ public class GUI extends PApplet {
     @Override
     public void keyPressed() {
         super.keyPressed();
-        if(key == 'n')
+        if(key == 'n' || key == 'N')
         {
             angle = 0;
             animation = true;
@@ -239,7 +236,7 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
-        else if (key == 'm')
+        else if (key == 'm' || key == 'M')
         {
             angle = 8;
             animationright = true;
@@ -249,7 +246,7 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
-        else if (key == 's')
+        else if (key == 's' || key == 'S')
         {
             Speech speechFromFile = new Speech(Pages.get(pn).lines.get(x));
             speechFromFile.say();

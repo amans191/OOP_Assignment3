@@ -14,8 +14,8 @@ import java.awt.*;
 public class Main extends JFrame{
 
     //main menu code
-    JButton finish, choose, settings, openCamera;
-    JLabel title, filechoosen;
+    JButton finish, choose, openCamera;
+    JLabel title, fileChosen, instructionsM, instructionsN, instructionsS;
 
     //text class
     Text load;
@@ -32,16 +32,34 @@ public class Main extends JFrame{
 
         //buttons
         title = new JLabel("BOOK READER");
-        l.fill = GridBagConstraints.HORIZONTAL;
+        l.fill = GridBagConstraints.CENTER;
         l.gridx = 2;
         l.gridy = 0;
         add(title,l);
 
-        filechoosen = new JLabel("Choose file");
-        l.fill = GridBagConstraints.HORIZONTAL;
+        fileChosen = new JLabel("Choose file");
+        l.fill = GridBagConstraints.CENTER;
         l.gridx = 2;
         l.gridy = 1;
-        add(filechoosen,l);
+        add(fileChosen,l);
+
+        instructionsM = new JLabel("[M] - Turn page right");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 4;
+        add(instructionsM,l);
+
+        instructionsN = new JLabel("[N] - Turn page left");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 5;
+        add(instructionsN,l);
+
+        instructionsS = new JLabel("[S] - Speak Text");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 6;
+        add(instructionsS,l);
 
         choose = new JButton("Choose File");
         l.fill = GridBagConstraints.HORIZONTAL;
@@ -51,14 +69,6 @@ public class Main extends JFrame{
         event e = new event();
         choose.addActionListener(e);
 
-        finish = new JButton("READ");
-        l.fill = GridBagConstraints.HORIZONTAL;
-        l.gridx = 2;
-        l.gridy = 3;
-        add(finish,l);
-        event2 fin = new event2();
-        finish.addActionListener(fin);
-
         openCamera = new JButton("Camera");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 3;
@@ -66,6 +76,14 @@ public class Main extends JFrame{
         add(openCamera, l);
         event3 cameraEvent = new event3();
         openCamera.addActionListener(cameraEvent);
+
+        finish = new JButton("READ");
+        l.fill = GridBagConstraints.HORIZONTAL;
+        l.gridx = 2;
+        l.gridy = 3;
+        add(finish,l);
+        event2 fin = new event2();
+        finish.addActionListener(fin);
 
     }
 
@@ -101,7 +119,7 @@ public class Main extends JFrame{
     public void choosefile()
     {
         load = new Text("");
-        filechoosen.setText("Book Chosen");
+        fileChosen.setText("Book Chosen");
 
         //book = new ArrayList<>();
         //book = load.lines;
