@@ -222,9 +222,11 @@ public class GUI extends PApplet {
     }
 
 
+    //changed keys to work with makey makey
     @Override
     public void keyPressed() {
         super.keyPressed();
+        //banana
         if(key == 'w' || key == 'W')
         {
             angle = 0;
@@ -238,6 +240,7 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
+        //apple
         else if (key == 'a' || key == 'A')
         {
             angle = 8;
@@ -248,6 +251,7 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
+
         else if (key == 's' || key == 'S')
         {
             Speech speechFromFile = new Speech(Pages.get(pn).lines.get(x));
