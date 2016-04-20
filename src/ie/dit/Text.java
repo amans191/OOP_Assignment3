@@ -84,6 +84,7 @@ public class Text  extends PApplet {
         }
     }
 
+    //selection of the file and loading function for it
     public void fileDialog(File selection) {
         if (selection == null)
         {
@@ -113,7 +114,7 @@ public class Text  extends PApplet {
         }
     }
 
-    //read text
+    //read text version 1(not used)
     public void readText(boolean words, GUI gui)
     {
         int i = 10;
@@ -146,6 +147,7 @@ public class Text  extends PApplet {
     //int j;
     //GUI gui;
     //ArrayList<Page> Pages;
+    //adding the lines to the pages
     public void Add(String Text)
     {
         //Pages = new ArrayList<>();
@@ -172,6 +174,7 @@ public class Text  extends PApplet {
     }
 
     //read lines
+    //checking the pages lines
     public void read()
     {
         int i =0;
@@ -197,6 +200,7 @@ public class Text  extends PApplet {
         return false;
     }
 
+    //to split the sentence into words
     public ArrayList<String> splitSentence(String sentence)
     {
         ArrayList<String> words = new ArrayList<>();
@@ -209,6 +213,8 @@ public class Text  extends PApplet {
         return words;
     }
 
+    //file is saved into one big string
+    //spliting the string by newline
     public ArrayList<String> splitFile(String textToBeSplit)
     {
         ArrayList<String> sentences = new ArrayList<>();
@@ -221,6 +227,7 @@ public class Text  extends PApplet {
         return sentences;
     }
 
+    //function to check if a string is a number
     public static boolean isNumeric(String str)
     {
         return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
