@@ -225,7 +225,7 @@ public class GUI extends PApplet {
     @Override
     public void keyPressed() {
         super.keyPressed();
-        if(key == 'n' || key == 'N')
+        if(key == 'w' || key == 'W')
         {
             angle = 0;
             animation = true;
@@ -238,7 +238,7 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
-        else if (key == 'm' || key == 'M')
+        else if (key == 'a' || key == 'A')
         {
             angle = 8;
             animationright = true;
