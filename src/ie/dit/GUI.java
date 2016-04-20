@@ -92,8 +92,8 @@ public class GUI extends PApplet {
         if (pn == Pages.size()){
             pn = 0;
         }
-        if (pn <= 2 && pageLoop){
-           // pn = Pages.size() - 2;
+        if (pn == 2 && pageLoop){
+            pn = Pages.size() - 2;
             pageLoop = false;
         }
 
@@ -103,7 +103,7 @@ public class GUI extends PApplet {
         }
         else if(animationright)
         {
-                 angle-=0.1;
+            angle-=0.1;
         }
         if( (angle > 7) && (animation))
         {
@@ -222,10 +222,12 @@ public class GUI extends PApplet {
     }
 
 
+    //changed keys to work with makey makey
     @Override
     public void keyPressed() {
         super.keyPressed();
-        if(key == 'n' || key == 'N')
+        //banana
+        if(key == 'w' || key == 'W')
         {
             angle = 0;
             animation = true;
@@ -238,7 +240,8 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
-        else if (key == 'm' || key == 'M')
+        //apple
+        else if (key == 'a' || key == 'A')
         {
             angle = 8;
             animationright = true;
@@ -248,6 +251,7 @@ public class GUI extends PApplet {
             }
             x = 0;
         }
+
         else if (key == 's' || key == 'S')
         {
             Speech speechFromFile = new Speech(Pages.get(pn).lines.get(x));

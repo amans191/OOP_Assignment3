@@ -8,11 +8,14 @@ import java.util.List;
 //text libraries
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
 //processing library
 import processing.core.PApplet;
+
+import javax.sound.midi.SysexMessage;
 
 
 public class Text  extends PApplet {
@@ -21,10 +24,13 @@ public class Text  extends PApplet {
     ArrayList<Page> Pages = new ArrayList<>();
 
     String fileName;
+    Boolean isDocx;
+    int pageCount;
 
     public Text(String s)
     {
         this.fileName = s;
+        this.isDocx = false;
         loadFile(fileName);
     }
 
@@ -76,10 +82,12 @@ public class Text  extends PApplet {
 
             List<XWPFParagraph> paragraphs = document.getParagraphs();
 
-
-            for (XWPFParagraph para : paragraphs) {
-                lines.add(para.getText());
-            }
+            XWPFWordExtractor extractor = new XWPFWordExtractor(document);
+            this.pageCount = extractor.getExtendedProperties().getPages();
+            String text = extractor.getText();
+            System.out.println(pageCount);
+            lines = splitFile(text);
+            Add(text);
             fis.close();
         }
         catch (IOException e){
@@ -108,6 +116,7 @@ public class Text  extends PApplet {
             }
             else if (fileType.equals("docx"))
             {
+                this.isDocx =  true;
                 loadDocxFile(selection);
             }
             else
@@ -157,23 +166,37 @@ public class Text  extends PApplet {
         int j=0;
         int i =0;
         Page page = new Page(j+1);
-        for( String sentence : Text.split("\n"))
-        {
-           page.lines.add(sentence);
 
-            //println(sentence);
-
-            if(checkfornumber(sentence,j))
-            {
-                Pages.add(page);
+        if (isDocx){
+            for(String sentence : Text.split("\n")){
+                page.lines.add(sentence);
                 j++;
-                page = new Page(j+1);
 
-                //println("p end ...............");
-                //i = 0;
+                if (i < pageCount && j == 24){
+                    Pages.add(page);
+                    i++;
+                    page = new Page(i + 1);
+                    j = 0;
+                }
             }
         }
+        else {
+            for (String sentence : Text.split("\n")) {
+                page.lines.add(sentence);
 
+                //println(sentence);
+
+                if (checkfornumber(sentence, j)) {
+                    Pages.add(page);
+                    j++;
+                    page = new Page(j + 1);
+
+                    //println("p end ...............");
+                    //i = 0;
+                }
+            }
+        }
+        System.out.println(i);
     }
 
     //read lines
