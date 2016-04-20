@@ -34,7 +34,20 @@ public class GUI extends PApplet {
     }
 
     private float angle ;
-
+    void animation()
+    {
+        if(!animation)
+        {
+            animation = true;
+        }
+    }
+    void animationright()
+    {
+        if(!animationright)
+        {
+            animationright = true;
+        }
+    }
     public void draw(){
 
 
@@ -68,8 +81,8 @@ public class GUI extends PApplet {
             } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
                 x = 0;
                 angle = 0;
-                animation = true;
-
+                //animation = true;
+                animation();
                 if (pn <= 2){
                     pageLoop = true;
                 }
@@ -80,7 +93,7 @@ public class GUI extends PApplet {
             pn = 0;
         }
         if (pn <= 2 && pageLoop){
-            pn = Pages.size() - 2;
+           // pn = Pages.size() - 2;
             pageLoop = false;
         }
 
@@ -92,20 +105,20 @@ public class GUI extends PApplet {
         {
                  angle-=0.1;
         }
-        if( (angle > 8) && (animation))
+        if( (angle > 6) && (animation))
         {
             animation = false;
             //animation = false;
             if(pn-2 >0) {
-                //pn -= 2;
+                pn -= 2;
             }
         }
-        else if( (angle<0.1 && (animationright)) )
+        else if( (angle<1 && (animationright)) )
         {
             animationright=false;
             if(pn+2 <= Pages.size()) {
 
-                // pn += 2;
+                 pn += 2;
             }
         }
         float h = height/20;
