@@ -51,7 +51,6 @@ public class Main extends JFrame{
         event e = new event();
         choose.addActionListener(e);
 
-
         finish = new JButton("READ");
         l.fill = GridBagConstraints.HORIZONTAL;
         l.gridx = 2;

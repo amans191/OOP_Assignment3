@@ -6,20 +6,20 @@ import java.util.ArrayList;
 
 public class GUI extends PApplet {
 
-    Text test;
+    Text text;
     Camera camera;
     Point p;
     int x;
     Boolean pageLoop;
 
     ArrayList<Page> Pages;
-    public GUI(Text test, Camera camera){
+    public GUI(Text text, Camera camera){
         Pages = new ArrayList<>();
-        this.test = test;
+        this.text = text;
         this.camera = camera;
         this.p = camera.p;
         this.x = 0;
-        Pages = test.Pages;
+        Pages = text.Pages;
         this.pageLoop = false;
         pn =0;
     }
@@ -62,12 +62,14 @@ public class GUI extends PApplet {
 
         if (camera.cameraOn) {
             if (camera.returnX() <= 40 && camera.returnX() >= 0) {
+                x = 0;
                 angle = 8;
                 animationright = true;
                 if(pn+2 <= Pages.size()) {
                     pn += 2;
                 }
             } else if (camera.returnX() <= 170 && camera.returnX() >= 130) {
+                x = 0;
                 angle = 0;
                 animation = true;
                 if(pn-2 >0) {
@@ -188,7 +190,7 @@ public class GUI extends PApplet {
 
 
         fill(0);
-        //test.readText(true, this);
+        //text.readText(true, this);
 
 
 
@@ -235,6 +237,7 @@ public class GUI extends PApplet {
             if (pn <= 2){
                 pageLoop = true;
             }
+            x = 0;
         }
         else if (key == 'm')
         {
@@ -244,10 +247,11 @@ public class GUI extends PApplet {
                 pn += 2;
 
             }
+            x = 0;
         }
         else if (key == 's')
         {
-            Speech speechFromFile = new Speech(test.lines.get(x));
+            Speech speechFromFile = new Speech(Pages.get(pn).lines.get(x));
             speechFromFile.say();
             x++;
         }
