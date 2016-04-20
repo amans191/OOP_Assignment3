@@ -4,10 +4,6 @@ package ie.dit;
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 
-/**
- * Created by Eoin on 13/04/2016.
- */
-
 //speech class
 //this class reads out the text
 public class Speech {
