@@ -105,7 +105,7 @@ public class GUI extends PApplet {
         {
                  angle-=0.1;
         }
-        if( (angle > 6) && (animation))
+        if( (angle > 7) && (animation))
         {
             animation = false;
             //animation = false;
