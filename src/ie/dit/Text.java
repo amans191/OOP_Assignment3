@@ -211,7 +211,7 @@ public class Text  extends PApplet {
     }
 
     //check page number so it goes to a new page every number on the book
-    public boolean checkfornumber( String sentence, int j)
+    private boolean checkfornumber( String sentence, int j)
     {
         for (String word: sentence.split(" "))
         {
@@ -227,7 +227,7 @@ public class Text  extends PApplet {
     }
 
     //to split the sentence into words
-    public ArrayList<String> splitSentence(String sentence)
+    private ArrayList<String> splitSentence(String sentence)
     {
         ArrayList<String> words = new ArrayList<>();
         for (String word: sentence.split(" "))
@@ -241,20 +241,17 @@ public class Text  extends PApplet {
 
     //file is saved into one big string
     //spliting the string by newline
-    public ArrayList<String> splitFile(String textToBeSplit)
+    private ArrayList<String> splitFile(String textToBeSplit)
     {
         ArrayList<String> sentences = new ArrayList<>();
         for (String sentence : textToBeSplit.split("\n")) {
             sentences.add(sentence);
-
-            //println(sentence);
-
         }
         return sentences;
     }
 
     //function to check if a string is a number
-    public static boolean isNumeric(String str)
+    private static boolean isNumeric(String str)
     {
         return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
